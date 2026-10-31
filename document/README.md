@@ -12,6 +12,8 @@ Organizamos os documentos exigidos pelas atividades dentro de `document/fase1/`,
 
 O [AI Project Document](ai_project_document_fiap.md) apresenta a evolução consolidada. O [README raiz](../README.md) identifica o grupo, explica as fases, mantém os links públicos e orienta a execução.
 
+Para anexar a Fase 3 na plataforma, preparamos o [documento de submissão — seis páginas](fase3/CardioIA_Fase3_Documento_de_Submissao.pdf). Reunimos identificação, resumo das atividades, resultados e acessos aos códigos, quatro relatórios e evidências. A versão de 31/10/2026 é para revisão: o link do vídeo do Ir Além 2 permanece pendente, assim como a publicação desta revisão e a confirmação do envio na FIAP. Esse documento orienta o acesso ao material e não substitui os relatórios específicos.
+
 ## Originais e caminhos atuais
 
 Preservamos os PDFs anteriores sem reescrever conteúdo, autoria, métricas ou caminhos da época. Para reproduzir hoje, utilizar os READMEs atuais. Para execução por professores ou ferramentas automatizadas, começar pela preparação do README raiz e seguir o guia atual da fase. Não extrair comandos isolados dos documentos históricos: eles registram os caminhos da entrega original. Os PDFs podem citar a organização antiga:

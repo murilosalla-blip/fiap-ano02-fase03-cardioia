@@ -2,6 +2,8 @@
 
 Preparamos este roteiro para apresentar resultados e análise crítica. A gravação e a publicação ainda estão pendentes; este documento não substitui o link de um vídeo real.
 
+Reservamos o campo **Vídeo da Fase 3 — Ir Além 2** na [seção de vídeo do README raiz](../../../README.md#-vídeo-de-demonstração). Mantemos ali o único campo para o link público, evitando versões diferentes do endereço. Em 31/10/2026, deixamos a gravação para depois da preparação dos demais materiais de entrega.
+
 ## Antes de gravar
 
 1. Concluir os passos do [guia](README.md) e abrir o HTML executado.
