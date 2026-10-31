@@ -24,6 +24,24 @@ Preservamos os 18 endereços externos originais do README, registrados em [links
 
 ## Publicações e dados locais
 
+### Mapeamento de documentos públicos e internos - 31/10/2026
+
+Reavaliamos os documentos por finalidade, sem equiparar “não obrigatório” a “sem utilidade”. Mantemos no GitHub os materiais que permitem avaliar requisitos, conferir resultados, reproduzir o projeto ou verificar a preservação das fases anteriores.
+
+| Material | Destino e justificativa |
+|---|---|
+| Roteiro de narração do vídeo do Ir Além 2 | Mantemos apenas a cópia local em `document/fase3/neuromorfismo/ROTEIRO_VIDEO.md`, ignorada por regra explícita. Retiramos do índice Git e removemos referências dos guias públicos e do documento de submissão. É preparação interna, não evidência de vídeo entregue. |
+| Novos ensaios de fala, rascunhos e anotações de trabalho | Reservamos `.tools/interno/`, já coberto pela regra `.tools/` do `.gitignore`. Não colocamos nesses diretórios código, guias ou evidências necessárias à entrega. |
+| `ROTEIRO_ENTREGA.md` e `CHECKLIST_ENUNCIADO.md` | Mantemos públicos: relacionam escopo, requisitos, evidências e pendências, oferecendo rastreabilidade ao avaliador. O roteiro de entrega não é roteiro de fala. |
+| READMEs, contratos, instalação, testes e guias de validação | Mantemos públicos: necessários à compreensão e reprodução das atividades. |
+| Quatro relatórios e documento de submissão da Fase 3 | Mantemos públicos: são entregáveis ou acessos centrais para avaliação; o vídeo permanece pendente. |
+| Logs finais, capturas, métricas, notebooks e registros de revisão | Mantemos públicos: comprovam execuções e limites, distinguindo verificações automatizadas de validações acompanhadas. |
+| Estudos de requisitos, referências e registros de organização/preservação | Mantemos como apoio em `document/other/`: contextualizam decisões e a continuidade das fases. Preservamos os materiais históricos das Fases 1 e 2. |
+
+Nesta revisão, classificamos para retirada pública somente um documento existente: o roteiro de narração. Não apagamos sua cópia local. O `.gitignore` impede novas inclusões acidentais, mas não remove versões antigas do histórico; o material continua recuperável no commit anterior `6710241de52d1906ef1c21a1f496c70d7330c891`. A retirada passa a valer no GitHub após publicar e integrar a alteração.
+
+Não usamos padrões como `*.md`, `*.pdf` ou `document/other/` no `.gitignore`, pois ocultariam materiais úteis ou essenciais. Ao compartilhar este projeto por ZIP fora do Git, selecionar os arquivos da entrega: `.gitignore` não impede anexar arquivos locais manualmente.
+
 Mantemos `src/fase2/app.py` e o arquivo adjacente `requirements.txt`, que aponta para `config/fase2/requirements.txt`. A aplicação Streamlit publicada está vinculada ao fork da Julia; preservamos esse vínculo e a publicação independente do portal. O workflow aninhado retirado não realizava a publicação a partir deste repositório.
 
 Mantemos bancos SQLite, logs de execução e dependências locais em `.tools/`, fora do Git. Não removemos nem sobrescrevemos esses arquivos na higienização. Para uma cópia antiga ainda com dados em `fase3/runtime`, encerrar primeiro painel e consumidor e executar `python scripts/fase3/migrar_runtime.py`; o migrador preserva a origem e recusa sobrescrever destinos existentes. Em uma cópia nova, seguir diretamente o guia de instalação, sem migração.

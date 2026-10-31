@@ -44,6 +44,10 @@ Thumbs.db
 .tools/build/fase3/
 .tools/runtime/fase3/
 
+# Material interno de preparação da apresentação (não integra a entrega FIAP).
+# Caminhos explícitos evitam ocultar relatórios, guias e evidências exigidos.
+/document/fase3/neuromorfismo/ROTEIRO_VIDEO.md
+
 # Fontes organizados por fase: dependências e artefatos ficam locais.
 **/node_modules/
 
