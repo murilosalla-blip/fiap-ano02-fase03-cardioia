@@ -143,7 +143,7 @@ Invoke-Item .tools/runtime/fase3/neuromorfismo/comparacao_temporal_lif.html
 - [ ] Conferimos os nove testes com `OK`.
 - [ ] Entendemos por que o resultado sintético não é um diagnóstico nem uma medida de economia energética.
 
-Esta lista é para quem reproduz preencher durante seu teste. Para a apresentação, seguir o [roteiro do vídeo](ROTEIRO_VIDEO.md); a gravação ainda precisa ser realizada e publicada.
+Esta lista é para quem reproduz preencher durante seu teste. A demonstração em vídeo, de até quatro minutos e com análise crítica, ainda precisa ser gravada, publicada como não listada no YouTube e vinculada ao README raiz.
 
 ## 🔎 Se algum passo falhar
 

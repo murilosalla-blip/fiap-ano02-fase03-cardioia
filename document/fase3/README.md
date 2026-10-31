@@ -296,7 +296,7 @@ Executar a consulta após o consumidor iniciar e receber dados. A chave é `(dev
 3. Executar a comparação e abrir os três gráficos na pasta local indicada.
 4. Executar todas as células do notebook pelo comando `--notebook` e abrir o HTML.
 5. Conferir os nove testes, as mesmas 48 sessões de teste e a análise crítica.
-6. Revisar o [relatório comparativo](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf) e preparar a gravação pelo [roteiro de vídeo](neuromorfismo/ROTEIRO_VIDEO.md).
+6. Revisar o [relatório comparativo](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf). O vídeo de até quatro minutos deve apresentar resultados e análise crítica; sua publicação não listada e inclusão do link no README raiz permanecem pendentes.
 
 **Resultado da referência:** tradicional com 44/48 acertos e LIF com 35/48, sem usar o teste para selecionar parâmetros. Os sinais são sintéticos e a rede LIF tem leitura logística treinada. Esta trilha não depende de Wokwi ou servidores. Gravação, publicação e link do vídeo ainda não estão concluídos.
 

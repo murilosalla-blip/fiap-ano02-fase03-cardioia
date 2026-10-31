@@ -142,7 +142,7 @@ Na **Fase 2**, publicamos um vídeo único de até quatro minutos que apresenta 
 
 - **Assistir no YouTube (não listado):** [CardioIA — Fase 2 completa](https://youtu.be/qoKjl6oeotY)
 
-Na **Fase 3**, ainda precisamos produzir e publicar o vídeo específico do Ir Além 2, com até quatro minutos e análise crítica da comparação dos modelos. Preparamos o [roteiro da apresentação](document/fase3/neuromorfismo/ROTEIRO_VIDEO.md), mas ainda não publicamos o vídeo. O link da Fase 2 permanece como registro da entrega anterior e não substitui esse novo vídeo.
+Na **Fase 3**, ainda precisamos produzir e publicar o vídeo específico do Ir Além 2, com até quatro minutos e análise crítica da comparação dos modelos. O link da Fase 2 permanece como registro da entrega anterior e não substitui esse novo vídeo.
 
 - **Vídeo da Fase 3 — Ir Além 2 (YouTube não listado, até quatro minutos):** link a incluir após a gravação e a conferência da publicação.
 
@@ -410,7 +410,7 @@ Não apagar `.tools/runtime/` para resolver problemas: ali ficam as medições e
 
 ## 🗃 Histórico de lançamentos
 
-- **31/10/2026 — Preparação da entrega:** reservamos o campo do vídeo do Ir Além 2 e organizamos o fechamento em sequência, com conferência do cadastro e das regras de upload, preparação do material, gravação por último e verificação do envio. Reavaliamos as duas partes e os dois desafios contra o enunciado, reexecutamos verificações e produzimos o documento de submissão de seis páginas, baseado na organização da Fase 2, com links clicáveis e vídeo pendente. Mantemos os resultados técnicos já validados e as pendências acadêmicas identificadas.
+- **31/10/2026 — Preparação da entrega:** reservamos o campo do vídeo do Ir Além 2 e organizamos o fechamento em sequência, com conferência do cadastro e das regras de upload, preparação do material, gravação por último e verificação do envio. Reavaliamos as duas partes e os dois desafios contra o enunciado, reexecutamos verificações e produzimos o documento de submissão de seis páginas, baseado na organização da Fase 2, com links clicáveis e vídeo pendente. Separamos o roteiro de narração como material interno local, atualizamos o .gitignore e retiramos suas referências públicas, preservando guias e evidências. Mantemos os resultados técnicos já validados e as pendências acadêmicas identificadas.
 
 Consolidamos as entregas de cada dia em um único registro, atualizado com os avanços daquele dia.
 

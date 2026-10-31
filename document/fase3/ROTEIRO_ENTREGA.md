@@ -71,7 +71,7 @@ Aceite: requisições de envio e consulta funcionam; cenário com alerta produz 
 - [x] Registramos limitações, semente, parâmetros e relógios distintos, sem inferir energia de chip a partir de Python.
 - [x] Produzimos notebook comentado e executado, resultados e [instruções passo a passo](neuromorfismo/README.md); código e guia incluídos nesta revisão.
 - [x] Produzimos [relatório comparativo de duas páginas](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf) e conferimos a renderização; revisão técnica concluída em 28/10/2026.
-- [x] Preparamos o [roteiro do vídeo](neuromorfismo/ROTEIRO_VIDEO.md) e reservamos o campo do link no README raiz.
+- [x] Reservamos o campo do link do vídeo no README raiz; mantemos o roteiro de narração como material interno, fora da entrega pública.
 - [ ] Gravar até quatro minutos e publicar como não listado no YouTube; deixamos esta produção para depois da preparação do restante da entrega.
 - [x] Concluímos a validação guiada em 28/10/2026: instalação, comparação, três gráficos, notebook, HTML e seis testes com `OK`.
 - [x] Concluímos a revisão técnica do relatório comparativo em 28/10/2026.
