@@ -71,7 +71,8 @@ Aceite: requisições de envio e consulta funcionam; cenário com alerta produz 
 - [x] Registramos limitações, semente, parâmetros e relógios distintos, sem inferir energia de chip a partir de Python.
 - [x] Produzimos notebook comentado e executado, resultados e [instruções passo a passo](neuromorfismo/README.md); código e guia incluídos nesta revisão.
 - [x] Produzimos [relatório comparativo de duas páginas](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf) e conferimos a renderização; revisão técnica concluída em 28/10/2026.
-- [ ] Preparamos o [roteiro do vídeo](neuromorfismo/ROTEIRO_VIDEO.md); ainda precisamos gravar até quatro minutos e publicar como não listado no YouTube.
+- [x] Preparamos o [roteiro do vídeo](neuromorfismo/ROTEIRO_VIDEO.md) e reservamos o campo do link no README raiz.
+- [ ] Gravar até quatro minutos e publicar como não listado no YouTube; deixamos esta produção para depois da preparação do restante da entrega.
 - [x] Concluímos a validação guiada em 28/10/2026: instalação, comparação, três gráficos, notebook, HTML e seis testes com `OK`.
 - [x] Concluímos a revisão técnica do relatório comparativo em 28/10/2026.
 - [ ] Vamos conferir o vídeo após sua publicação.
@@ -89,10 +90,24 @@ Aceite: os dois modelos fazem previsões comparáveis em teste separado; execuç
 - [x] Fizemos a reprodução em cópia nova e a revisão acompanhada dos cenários visuais em 27/10/2026; conferimos sensores, entrada/retorno dos alertas, interrupção, recuperação e persistência REST. Preservamos 41 medições únicas sem lacunas ou perdas.
 - [x] Conferimos os dois Wokwi, os repositórios e os materiais públicos das fases anteriores, sem autenticação.
 - [ ] Vamos conferir o novo vídeo não listado após sua publicação.
-- [ ] Vamos preparar documento/arquivo para submissão conforme a plataforma.
+- [x] Preparamos o [documento de submissão de seis páginas](CardioIA_Fase3_Documento_de_Submissao.pdf), baseado no documento da Fase 2, com identificação, resultados, links clicáveis e campo de vídeo pendente.
+- [ ] Vamos completar o vídeo, publicar a revisão e adequar o arquivo final às regras de upload da plataforma.
 - [ ] Vamos validar o pacote final e realizar e conferir o envio na FIAP.
 
 Aceite: cada item do enunciado tem evidência acessível. Só vamos registrar publicação, teste no simulador ou submissão após a verificação correspondente.
+
+## Fechamento organizado em 31/10/2026
+
+Concluímos a parte técnica: Edge, MQTT/dashboard, REST/e-mail, comparação tradicional/LIF, quatro relatórios e validações registradas. Vamos concluir os preparativos abaixo antes de gravar, preservando os resultados já conferidos.
+
+1. **Conferir o cadastro na FIAP.** Abrir a atividade e verificar se Murilo Salla (RM568041), Elias da Silva de Souza (RM568500) e Julia Duarte de Carvalho (RM567816) estão associados ao grupo. Os nomes nos relatórios não confirmam esse cadastro.
+2. **Conferir as regras de envio.** Verificar os campos da atividade, extensões aceitas, tamanho máximo e possibilidade de enviar arquivos separados. Confirmar o prazo na plataforma; o enunciado arquivado informa 04/11/2026 às 23h59.
+3. **Preparar o material conforme essas regras.** Utilizar os quatro PDFs de `document/fase3/`, o repositório público e os links de reprodução no README. Se houver campo para um documento de submissão, preparar nele a identificação dos três integrantes e os acessos aos entregáveis. Se houver exigência de arquivo compactado, selecionar apenas o material solicitado, sem ambientes `.venv`, dependências ou saídas temporárias de `.tools`. Não consideramos definido um formato de upload antes de conferir a plataforma.
+4. **Conferir o material preparado.** Abrir cada documento que será enviado e verificar integrantes, legibilidade e links. Nesta etapa, manter o vídeo explicitamente pendente; o material é uma preparação, não a entrega final.
+5. **Gravar por último.** Seguir o roteiro de até quatro minutos, publicar como não listado, testar a reprodução sem autenticação e substituir o texto reservado na seção de vídeo do README raiz pelo link real. Atualizar os documentos de submissão que precisarem desse acesso.
+6. **Publicar e enviar.** Conferir a revisão final no GitHub, montar o arquivo definitivo conforme a plataforma, realizar o envio e baixar/reabrir o conteúdo enviado. Registrar a confirmação efetiva.
+
+Podemos considerar o desenvolvimento técnico concluído. Para encerrar todo o escopo escolhido pelo grupo, ainda precisamos do vídeo e do fechamento acadêmico descrito acima. Mantemos esses itens separados para não atribuir ao vídeo pendências de cadastro ou de submissão.
 
 ## Decisões iniciais e limites
 
