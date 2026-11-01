@@ -72,10 +72,11 @@ Aceite: requisições de envio e consulta funcionam; cenário com alerta produz 
 - [x] Produzimos notebook comentado e executado, resultados e [instruções passo a passo](neuromorfismo/README.md); código e guia incluídos nesta revisão.
 - [x] Produzimos [relatório comparativo de duas páginas](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf) e conferimos a renderização; revisão técnica concluída em 28/10/2026.
 - [x] Reservamos o campo do link do vídeo no README raiz; mantemos o roteiro de narração como material interno, fora da entrega pública.
-- [ ] Gravar até quatro minutos e publicar como não listado no YouTube; deixamos esta produção para depois da preparação do restante da entrega.
+- [x] Produzimos e publicamos o [vídeo de 2min59s](https://youtu.be/-v9lWpZ_JJo) no YouTube como não listado em 01/11/2026.
 - [x] Concluímos a validação guiada em 28/10/2026: instalação, comparação, três gráficos, notebook, HTML e seis testes com `OK`.
 - [x] Concluímos a revisão técnica do relatório comparativo em 28/10/2026.
-- [ ] Vamos conferir o vídeo após sua publicação.
+- [x] Conferimos duração, visibilidade não listada e início da reprodução sem login.
+- [x] Conferimos o conteúdo da narração pela transcrição automática do YouTube, separadamente da conferência visual, com ressalva de possíveis erros de reconhecimento.
 
 Aceite: os dois modelos fazem previsões comparáveis em teste separado; execução é reproduzível; relatório interpreta os resultados sem promessas clínicas.
 
@@ -85,16 +86,20 @@ Aceite: os dois modelos fazem previsões comparáveis em teste separado; execuç
 - [x] Produzimos o [relatório MQTT/dashboard de quatro páginas](CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf) e conferimos sua paginação e renderização.
 - [x] Concluímos a revisão técnica dos dois relatórios obrigatórios em 28/10/2026.
 - [x] Conferimos os dois relatórios dos desafios, com duas páginas cada.
-- [x] Consolidamos README com instalação, arquitetura, limites, integrantes/RMs e links públicos; o link do vídeo da Fase 3 será acrescentado após a publicação.
+- [x] Consolidamos README com instalação, arquitetura, limites, integrantes/RMs e links públicos; o link do vídeo da Fase 3 foi acrescentado em 01/11/2026.
 - [x] Consolidamos checklist requisito → arquivo → evidência → resultado, distinguindo os itens concluídos de vídeo e submissão.
 - [x] Fizemos a reprodução em cópia nova e a revisão acompanhada dos cenários visuais em 27/10/2026; conferimos sensores, entrada/retorno dos alertas, interrupção, recuperação e persistência REST. Preservamos 41 medições únicas sem lacunas ou perdas.
 - [x] Conferimos os dois Wokwi, os repositórios e os materiais públicos das fases anteriores, sem autenticação.
-- [ ] Vamos conferir o novo vídeo não listado após sua publicação.
-- [x] Preparamos o [documento de submissão de seis páginas](CardioIA_Fase3_Documento_de_Submissao.pdf), baseado no documento da Fase 2, com identificação, resultados, links clicáveis e campo de vídeo pendente.
-- [ ] Vamos completar o vídeo, publicar a revisão e adequar o arquivo final às regras de upload da plataforma.
+- [x] Conferimos a publicação não listada e o início da reprodução sem login em 01/11/2026.
+- [x] Preparamos o [documento de submissão de seis páginas](CardioIA_Fase3_Documento_de_Submissao.pdf), baseado no documento da Fase 2, com identificação, resultados, links clicáveis e link do vídeo incluído em 01/11/2026.
+- [ ] Vamos publicar esta revisão e adequar o arquivo final às regras de upload da plataforma.
 - [ ] Vamos validar o pacote final e realizar e conferir o envio na FIAP.
 
 Aceite: cada item do enunciado tem evidência acessível. Só vamos registrar publicação, teste no simulador ou submissão após a verificação correspondente.
+
+## Situação atualizada em 01/11/2026
+
+Publicamos o [vídeo do Ir Além 2](https://youtu.be/-v9lWpZ_JJo) e atualizamos o documento de submissão. Conferimos duração, gráficos e números visíveis, visibilidade não listada e reprodução sem login; conferimos também o conteúdo narrado na transcrição automática, sujeita a erros de reconhecimento. Mantemos cadastro, regras de upload e envio acadêmico pendentes. O plano datado abaixo registra a sequência definida antes da publicação.
 
 ## Fechamento organizado em 31/10/2026
 

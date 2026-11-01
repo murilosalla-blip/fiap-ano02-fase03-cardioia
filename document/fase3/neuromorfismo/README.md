@@ -4,7 +4,7 @@ Comparamos uma **regressão logística sobre atributos temporais** com uma **red
 
 Damos sequência aos classificadores da Fase 2 e à coleta temporal da Fase 3. As bases anteriores não são séries longitudinais de sinais vitais; por isso, geramos sessões sintéticas próprias. Não ordenamos pacientes da base Cleveland para simular tempo, não reutilizamos imagens de ECG como leituras do ESP32 e não classificamos os testes manuais do botão como diagnóstico.
 
-**Situação:** concluímos a implementação e os testes locais. Produzimos o [relatório comparativo de duas páginas](../CardioIA_Fase3_Relatorio_Neuromorfismo.pdf), com revisão técnica concluída em 28/10/2026. Concluímos a validação guiada em 28/10/2026: instalação, comparação, três gráficos, notebook completo, HTML e seis testes com `OK`. Na revisão técnica, acrescentamos e aprovamos três testes de exportação, totalizando nove. A gravação, a publicação do vídeo não listado e a inclusão do link no README raiz permanecem pendentes. Alterações locais só estarão disponíveis em um novo clone depois de publicadas no GitHub.
+**Situação:** concluímos a implementação e os testes locais. Produzimos o [relatório comparativo de duas páginas](../CardioIA_Fase3_Relatorio_Neuromorfismo.pdf), com revisão técnica concluída em 28/10/2026. Concluímos a validação guiada em 28/10/2026: instalação, comparação, três gráficos, notebook completo, HTML e seis testes com `OK`. Na revisão técnica, acrescentamos e aprovamos três testes de exportação, totalizando nove. Publicamos o [vídeo de 2min59s](https://youtu.be/-v9lWpZ_JJo) em 01/11/2026; conferimos visibilidade não listada, reprodução sem login e inclusão do link no README raiz. Conferimos o conteúdo narrado pela transcrição automática do YouTube, distinguindo-a de escuta integral e reconhecendo possíveis erros de reconhecimento. Alterações locais só estarão disponíveis em um novo clone depois de publicadas no GitHub.
 
 ## 🎯 O que classificamos
 
@@ -143,7 +143,7 @@ Invoke-Item .tools/runtime/fase3/neuromorfismo/comparacao_temporal_lif.html
 - [ ] Conferimos os nove testes com `OK`.
 - [ ] Entendemos por que o resultado sintético não é um diagnóstico nem uma medida de economia energética.
 
-Esta lista é para quem reproduz preencher durante seu teste. A demonstração em vídeo, de até quatro minutos e com análise crítica, ainda precisa ser gravada, publicada como não listada no YouTube e vinculada ao README raiz.
+Esta lista é para quem reproduz preencher durante seu teste. A [demonstração em vídeo](https://youtu.be/-v9lWpZ_JJo), com 2min59s, está publicada como não listada e vinculada ao README raiz.
 
 ## 🔎 Se algum passo falhar
 
@@ -173,4 +173,4 @@ Limitamos a análise a uma semente e a dois regimes artificiais. Não controlamo
 - Gerstner et al. — [Reservoir computing](https://neuronaldynamics.epfl.ch/online/Ch20.S1.html).
 - Scikit-learn — [Prevenção de vazamento e ajuste do pré-processamento](https://scikit-learn.org/stable/common_pitfalls.html).
 
-Adaptamos as equações para um exemplo próprio; não reproduzimos os experimentos do livro. O relatório de duas páginas e o notebook complementam este guia. O vídeo não listado e sua ligação no README raiz continuam necessários para concluir o desafio escolhido pelo grupo.
+Adaptamos as equações para um exemplo próprio; não reproduzimos os experimentos do livro. O relatório de duas páginas e o notebook complementam este guia. Publicamos o vídeo não listado e acrescentamos seu link ao README raiz. O envio acadêmico permanece separado desta publicação.

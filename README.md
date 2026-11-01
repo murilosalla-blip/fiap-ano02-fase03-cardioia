@@ -30,7 +30,7 @@
 
 Desenvolvemos o **CardioIA** como projeto acadêmico da FIAP ao longo de 7 fases. Na **Fase 1 — "Batimentos de Dados: Mapeando o Coração Moderno"**, reunimos dados numéricos, textuais e visuais. Na **Fase 2 — Machine Learning**, desenvolvemos extração de sintomas, classificação textual com TF-IDF, portal React e experimentos tabulares e visuais. Na **Fase 3 — Monitoramento Contínuo: IoT na Saúde**, acrescentamos captura simulada com ESP32, resiliência offline, transmissão MQTT e visualização no Node-RED, mantendo a evolução das entregas anteriores.
 
-Na **Fase 3**, coletamos temperatura ambiente, umidade e pulsos artificiais, preservamos leituras durante interrupções e acompanhamos a recuperação e os alertas no painel. A telemetria é independente dos pacientes e relatos das bases anteriores. Produzimos os relatórios obrigatórios de Edge e MQTT/dashboard. Implementamos e testamos localmente o cliente REST com e-mail simulado; concluímos a validação guiada e produzimos seu relatório de duas páginas, com revisão técnica concluída em 28/10/2026. Implementamos a comparação entre classificador tradicional e rede LIF, com notebook executado e relatório de duas páginas; concluímos a validação guiada, com revisão técnica concluída e vídeo pendente.
+Na **Fase 3**, coletamos temperatura ambiente, umidade e pulsos artificiais, preservamos leituras durante interrupções e acompanhamos a recuperação e os alertas no painel. A telemetria é independente dos pacientes e relatos das bases anteriores. Produzimos os relatórios obrigatórios de Edge e MQTT/dashboard. Implementamos e testamos localmente o cliente REST com e-mail simulado; concluímos a validação guiada e produzimos seu relatório de duas páginas, com revisão técnica concluída em 28/10/2026. Implementamos a comparação entre classificador tradicional e rede LIF, com notebook executado e relatório de duas páginas; concluímos a validação guiada, com revisão técnica concluída e vídeo publicado no YouTube em 01/11/2026.
 
 > **Uso exclusivamente educacional.** Não realizamos diagnóstico, não estimamos risco clínico real e não substituímos avaliação médica.
 
@@ -125,14 +125,14 @@ Reutilizamos o mesmo circuito nos dois projetos Wokwi, com firmwares diferentes.
 
 **Evidências:** [Testes Edge](document/other/fase3/evidencias/2026-10-24/RESULTADOS.md), [testes MQTT](document/other/fase3/evidencias/2026-10-24/mqtt/RESULTADOS.md) e [validação do painel](document/other/fase3/evidencias/2026-10-24/dashboard/validacao_guiada/RESULTADOS.md)
 
-**Situação da entrega:** validamos sensores, fila offline, MQTT, Node-RED e os dois desafios implementados. Concluímos a revisão técnica dos quatro relatórios em 28/10/2026: [Edge — duas páginas](document/fase3/CardioIA_Fase3_Relatorio_Edge.pdf), [MQTT/dashboard — quatro páginas](document/fase3/CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf), [REST/e-mail — duas páginas](document/fase3/CardioIA_Fase3_Relatorio_REST_Email.pdf) e [Tradicional/LIF — duas páginas](document/fase3/CardioIA_Fase3_Relatorio_Neuromorfismo.pdf). Registramos a [conferência do pacote e dos links](document/other/fase3/evidencias/2026-10-28/REVISAO_ENTREGA.md). O vídeo do Ir Além 2, a conferência do cadastro na FIAP e a submissão continuam pendentes.
+**Situação da entrega:** validamos sensores, fila offline, MQTT, Node-RED e os dois desafios implementados. Concluímos a revisão técnica dos quatro relatórios em 28/10/2026: [Edge — duas páginas](document/fase3/CardioIA_Fase3_Relatorio_Edge.pdf), [MQTT/dashboard — quatro páginas](document/fase3/CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf), [REST/e-mail — duas páginas](document/fase3/CardioIA_Fase3_Relatorio_REST_Email.pdf) e [Tradicional/LIF — duas páginas](document/fase3/CardioIA_Fase3_Relatorio_Neuromorfismo.pdf). Registramos a [conferência do pacote e dos links](document/other/fase3/evidencias/2026-10-28/REVISAO_ENTREGA.md). Publicamos o vídeo do Ir Além 2 em 01/11/2026 e conferimos duração, visibilidade não listada e reprodução sem login. A conferência do cadastro na FIAP e a submissão continuam pendentes.
 
-Preparamos o [documento de submissão da Fase 3 — seis páginas](document/fase3/CardioIA_Fase3_Documento_de_Submissao.pdf), com integrantes, resumo, entregáveis, resultados e links para avaliação. A versão de 31/10/2026 mantém o vídeo do Ir Além 2 pendente; vamos completar esse campo e conferir a publicação dos materiais antes do envio na FIAP.
+Preparamos o [documento de submissão da Fase 3 — seis páginas](document/fase3/CardioIA_Fase3_Documento_de_Submissao.pdf), com integrantes, resumo, entregáveis, resultados e links para avaliação. Atualizamos a versão de 01/11/2026 com o link do vídeo. Vamos conferir a publicação desta revisão e as regras da plataforma antes do envio na FIAP.
 
 Mantemos os dois desafios **Ir Além** no escopo do grupo, como na Fase 2. A tabela da atividade principal distribui dez pontos; não atribuímos pontuação adicional aos desafios:
 
 - **Ir Além 1 — REST e e-mail:** implementamos cliente Python com envio e consulta HTTP, regras didáticas e e-mail em arquivo local. Conferimos sete testes e uma demonstração de cinco leituras e dois e-mails. Seguir o [guia de execução e validação](document/fase3/rest/README.md). Concluímos a validação guiada e produzimos o [relatório de duas páginas](document/fase3/CardioIA_Fase3_Relatorio_REST_Email.pdf), com revisão técnica concluída em 28/10/2026.
-- **Ir Além 2 — séries temporais e neuromorfismo:** comparamos regressão logística com uma rede recorrente LIF de 24 neurônios e saída treinada, nas mesmas sessões sintéticas de BPM. Preservamos o [notebook executado](src/fase3/notebooks/comparacao_temporal_lif.ipynb), os resultados e o [relatório de duas páginas](document/fase3/CardioIA_Fase3_Relatorio_Neuromorfismo.pdf). Seguir o [guia completo](document/fase3/neuromorfismo/README.md). Concluímos a validação guiada; falta o vídeo não listado de **até quatro minutos**, com link neste README.
+- **Ir Além 2 — séries temporais e neuromorfismo:** comparamos regressão logística com uma rede recorrente LIF de 24 neurônios e saída treinada, nas mesmas sessões sintéticas de BPM. Preservamos o [notebook executado](src/fase3/notebooks/comparacao_temporal_lif.ipynb), os resultados e o [relatório de duas páginas](document/fase3/CardioIA_Fase3_Relatorio_Neuromorfismo.pdf). Seguir o [guia completo](document/fase3/neuromorfismo/README.md). Concluímos a validação guiada e publicamos o vídeo de **2min59s**, com link neste README.
 
 O prazo informado é **04/11/2026, às 23h59**. Acompanhamos a conclusão, a reprodução do pacote e a submissão no [roteiro de entrega](document/fase3/ROTEIRO_ENTREGA.md).
 
@@ -142,11 +142,11 @@ Na **Fase 2**, publicamos um vídeo único de até quatro minutos que apresenta 
 
 - **Assistir no YouTube (não listado):** [CardioIA — Fase 2 completa](https://youtu.be/qoKjl6oeotY)
 
-Na **Fase 3**, ainda precisamos produzir e publicar o vídeo específico do Ir Além 2, com até quatro minutos e análise crítica da comparação dos modelos. O link da Fase 2 permanece como registro da entrega anterior e não substitui esse novo vídeo.
+Na **Fase 3**, publicamos o vídeo específico do Ir Além 2 com resultados e análise crítica da comparação dos modelos. Conferimos os gráficos e números da versão local, a duração de 2min59s e a reprodução no YouTube sem login. Mantemos o vídeo da Fase 2 como registro independente da entrega anterior.
 
-- **Vídeo da Fase 3 — Ir Além 2 (YouTube não listado, até quatro minutos):** link a incluir após a gravação e a conferência da publicação.
+- **Assistir no YouTube (não listado, 2min59s):** [CardioIA — Fase 3, Ir Além 2](https://youtu.be/-v9lWpZ_JJo)
 
-Concluímos a implementação, os relatórios e as validações técnicas. Deixamos a gravação para o último passo de produção do conteúdo. Antes dela, podemos conferir o cadastro do grupo e as regras de upload na FIAP e preparar o material de submissão. A entrega acadêmica será concluída após incluir o vídeo e confirmar o envio na plataforma.
+Concluímos a implementação, os relatórios e as validações técnicas, e disponibilizamos o vídeo. A conferência visual identificou os gráficos originais, resultados e limitações; conferimos também o conteúdo narrado por meio da transcrição automática disponibilizada pelo YouTube, sujeita a erros de reconhecimento. A entrega acadêmica depende da conferência do cadastro, das regras de upload e do envio confirmado na FIAP.
 
 ## 📁 Estrutura de pastas
 
@@ -388,14 +388,14 @@ Invoke-Item .tools/runtime/fase3/neuromorfismo/comparacao_temporal_lif.html
 ```
 
 - Seguir os [oito passos de execução e conferência](document/fase3/neuromorfismo/README.md), incluindo nove testes (seis dos modelos e três de exportação). Os programas terminam sozinhos; não há servidor para encerrar.
-- A classificação compara regimes artificiais, sem diagnóstico ou medição de economia energética. O vídeo não listado continua pendente.
+- A classificação compara regimes artificiais, sem diagnóstico ou medição de economia energética. O [vídeo não listado](https://youtu.be/-v9lWpZ_JJo) está publicado.
 
 ### 8. Conferir a entrega e os próximos passos
 
 - Marcar a lista de conferência no [guia da Fase 3](document/fase3/README.md) somente após observar cada resultado.
 - Para verificações adicionais de contrato, fila e confirmações, seguir o [guia de testes](document/fase3/tests/README.md).
 - Consultar os relatórios e as evidências pelo [índice da documentação](document/README.md).
-- O **Ir Além 2 está implementado e testado localmente**. Concluímos a validação guiada; faltam vídeo e submissão; o [roteiro](document/fase3/ROTEIRO_ENTREGA.md) identifica o que falta.
+- O **Ir Além 2 está implementado e testado localmente**. Concluímos a validação guiada e publicamos o vídeo; falta fechar a submissão; o [roteiro](document/fase3/ROTEIRO_ENTREGA.md) identifica o que falta.
 
 ### Se algum passo não funcionar
 
@@ -409,6 +409,8 @@ Invoke-Item .tools/runtime/fase3/neuromorfismo/comparacao_temporal_lif.html
 Não apagar `.tools/runtime/` para resolver problemas: ali ficam as medições e os e-mails dos testes. Reexecuções de treinamento podem substituir resultados locais; utilizar uma cópia de avaliação separada para preservar o material entregue. Confirmar as instruções da revisão baixada, pois alterações ainda locais não aparecem em um novo clone público.
 
 ## 🗃 Histórico de lançamentos
+
+- **01/11/2026 — Vídeo do Ir Além 2:** publicamos a apresentação de 2min59s no YouTube como não listada, conferimos reprodução sem login e atualizamos o link nos guias, checklist e documentos de submissão; preservamos as evidências de revisão visual e conferimos a transcrição automática com os dados do experimento. Mantemos o fechamento acadêmico pendente.
 
 - **31/10/2026 — Preparação da entrega:** reservamos o campo do vídeo do Ir Além 2 e organizamos o fechamento em sequência, com conferência do cadastro e das regras de upload, preparação do material, gravação por último e verificação do envio. Reavaliamos as duas partes e os dois desafios contra o enunciado, reexecutamos verificações e produzimos o documento de submissão de seis páginas, baseado na organização da Fase 2, com links clicáveis e vídeo pendente. Separamos o roteiro de narração como material interno local, atualizamos o .gitignore e retiramos suas referências públicas, preservando guias e evidências. Mantemos os resultados técnicos já validados e as pendências acadêmicas identificadas.
 
