@@ -7,7 +7,7 @@ import tempfile
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from validar_organizacao import carregar_retirados
+from validar_organizacao import carregar_retirados, verificar_links_preservados
 from fase1.verificar_preservacao import verificar
 
 
@@ -41,6 +41,36 @@ class PreservacaoApoioTest(unittest.TestCase):
                 self.gravar(self.item(caminho, "aulas_pdf"))
                 with self.assertRaisesRegex(AssertionError, "fora do escopo"):
                     carregar_retirados(self.root)
+
+    def test_planejamento_interno_tem_excecao_individual(self):
+        self.gravar(self.item("document/fase3/ROTEIRO_ENTREGA.md", "planejamento_interno"))
+        self.assertEqual(1, len(carregar_retirados(self.root)))
+        for caminho in ("document/fase3/CHECKLIST_ENUNCIADO.md", "document/fase3/CardioIA_Fase3_Relatorio_Edge.pdf",
+                        "src/fase3/python/consumidor_mqtt.py", "assets/fase1/base.csv"):
+            with self.subTest(caminho=caminho):
+                self.gravar(self.item(caminho, "planejamento_interno"))
+                with self.assertRaisesRegex(AssertionError, "fora do escopo"):
+                    carregar_retirados(self.root)
+
+    def test_alias_pode_mudar_de_documento_sem_desaparecer(self):
+        alias = "https://github.com/murilosalla-blip/fiap-ano02-fase01-cap01-cardioia"
+        video = "https://youtu.be/qoKjl6oeotY"
+        self.root.joinpath("README.md").write_text(f"[Video]({video})", encoding="utf-8")
+        self.registros.joinpath("README.md").write_text(f"[Alias]({alias})", encoding="utf-8")
+        registro = {"urls": [alias, video], "realocados": {alias: "document/other/organizacao/README.md"}}
+        self.registros.joinpath("links_externos_preservados.json").write_text(json.dumps(registro), encoding="utf-8")
+        verificar_links_preservados(self.root)
+        self.registros.joinpath("README.md").write_text("Alias removido", encoding="utf-8")
+        with self.assertRaisesRegex(AssertionError, "Link externo removido"):
+            verificar_links_preservados(self.root)
+
+    def test_realocacao_nao_oculta_video_ou_material_essencial(self):
+        for url in ("https://youtu.be/qoKjl6oeotY", "https://drive.google.com/drive/folders/material"):
+            with self.subTest(url=url):
+                registro = {"urls": [url], "realocados": {url: "document/other/organizacao/README.md"}}
+                self.registros.joinpath("links_externos_preservados.json").write_text(json.dumps(registro), encoding="utf-8")
+                with self.assertRaisesRegex(AssertionError, "não autorizada"):
+                    verificar_links_preservados(self.root)
 
     def test_caminho_fora_do_projeto_e_rejeitado(self):
         self.gravar(self.item("../aula.pdf", "aulas_pdf"))

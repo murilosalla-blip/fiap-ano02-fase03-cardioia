@@ -95,7 +95,7 @@ Vamos manter essas melhorias em um backlog próprio e priorizar na Fase 3 a inte
 
 Vamos organizar as frentes de firmware/Edge, MQTT/Node-RED e integração/testes/documentação. Vamos combinar as responsabilidades com a equipe e manter o contrato de mensagens compartilhado para revisão cruzada.
 
-Organizamos a execução em `document/fase3/ROTEIRO_ENTREGA.md`, incluindo a entrega obrigatória e os dois desafios Ir Além em seis etapas de implementação e revisão.
+Organizamos o planejamento em material interno. Os guias públicos e a matriz de requisitos documentam a reprodução, os entregáveis e suas evidências.
 
 Planejamos organizar os arquivos em `src/fase3/firmware/`, `src/fase3/node-red/`, `src/fase3/python/`, `fase3/notebooks/`, `src/fase3/tests/`, `document/other/fase3/evidencias/`, `fase3/relatorios/`, `document/fase3/README.md` e `document/fase3/CHECKLIST_ENUNCIADO.md`. Vamos versionar configurações de exemplo sem credenciais e preservar as entregas anteriores. Antes de alterar o portal, vamos registrar seu repositório de origem oficial, pois encontramos uma cópia local e um repositório separado documentado.
 

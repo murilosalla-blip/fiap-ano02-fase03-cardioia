@@ -443,6 +443,19 @@
       "sha256": "36329c71ebde6f40d6cd6e2fd3466e759fb405664b615dc346e3ab14a9fdce43",
       "sha256_lf": "36329c71ebde6f40d6cd6e2fd3466e759fb405664b615dc346e3ab14a9fdce43",
       "sha_git": "96a44c06273409ffa255cac3712ad84d9933ce74"
+    },
+    {
+      "caminho": "document/fase3/ROTEIRO_ENTREGA.md",
+      "categoria": "planejamento_interno",
+      "sha256": "7c8a66334a6f2e6506c3698830140ca38ba3d122b002cd37f99753d1618bef9b",
+      "sha256_lf": "8155aa94c6e34b6e9c6f8d8e8bc8b8f7d3146924ccd5a73c90d0014eeed9de92",
+      "sha_git": "582839bedaa4bf6ae11932cc5b606de39e30247f",
+      "commit_recuperacao": "643d8abf3c7c6929087364065f2f8c547a184066",
+      "caminho_recuperacao": "fase3/ROTEIRO_ENTREGA.md",
+      "commit_ultima_versao": "f0f06d963b7f1cf06b84167980fdb272a68343e9",
+      "caminho_ultima_versao": "document/fase3/ROTEIRO_ENTREGA.md",
+      "sha256_ultima_versao": "4397c46c12678e33451b4abb5da28b629388b9c76079e84b24fcce05cedcb4b8",
+      "backup_local": ".tools/interno/fase3/ROTEIRO_ENTREGA.md"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "descricao": "Preservo todos os endereços externos que constavam no README anterior à organização, incluindo materiais da Fase 1 e a gravação da Fase 2.",
+  "descricao": "Preservamos os endereços externos originais; os dois aliases do repositório renomeado ficam no registro de organização, e os materiais/vídeos permanecem nas respectivas fases do README.",
   "commit_origem": "643d8abf3c7c6929087364065f2f8c547a184066",
   "arquivo_origem": "README.md",
   "urls": [
@@ -21,5 +21,9 @@
     "https://wokwi.com/projects/478772789361460225",
     "https://www.fiap.com.br/",
     "https://youtu.be/qoKjl6oeotY"
-  ]
+  ],
+  "realocados": {
+    "https://github.com/murilosalla-blip/fiap-ano02-fase01-cap01-cardioia": "document/other/organizacao/README.md",
+    "https://github.com/murilosalla-blip/fiap-ano02-fase01-cap01-cardioia.git": "document/other/organizacao/README.md"
+  }
 }

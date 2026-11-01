@@ -16,7 +16,7 @@ Antes dos comandos, concluir a [preparação da Fase 3](../README.md#como-reprod
 .\.venv\Scripts\python.exe scripts/fase1/verificar_preservacao.py
 ```
 
-Resultado esperado: 23 testes Python da Fase 3 e seis testes de proteção aprovados; integridade e links locais válidos. Conferimos persistência antes do ACK, reenvio, duplicatas, conflitos, falhas e migração sem sobrescrever dados anteriores. O exemplo JSON validado é uma referência do contrato, não uma saída de sensor.
+Resultado esperado: 23 testes Python da Fase 3 e nove testes de proteção aprovados; integridade e links locais válidos. Conferimos persistência antes do ACK, reenvio, duplicatas, conflitos, falhas e migração sem sobrescrever dados anteriores. O exemplo JSON validado é uma referência do contrato, não uma saída de sensor.
 
 ## Regras e fluxo Node-RED
 
