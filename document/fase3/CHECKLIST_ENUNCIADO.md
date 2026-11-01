@@ -32,7 +32,7 @@ Não atribuímos nota antecipada a esta matriz. A avaliação pertence à FIAP; 
 | Ir Além 2 classificador tradicional e LIF/FHN | 5 | [Notebook executado](../../src/fase3/notebooks/comparacao_temporal_lif.ipynb) e [resultados](../../assets/fase3/resultados/neuromorfismo/) | Implementamos e executamos tradicional/LIF em ambiente novo; validação guiada concluída em 28/10/2026; nove testes locais aprovados após conferir a exportação |
 | Ir Além 2 repositório público, código e README | 5–6 | Código da comparação, notebook e reprodução | O repositório já é público; código, notebook executado, resultados e guia acompanham esta revisão |
 | Ir Além 2 relatório comparativo de duas páginas | 5 | [Relatório comparativo](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf) | Produzimos duas páginas e conferimos a renderização; revisão técnica concluída em 28/10/2026 |
-| Ir Além 2 vídeo até quatro minutos não listado | 5 | YouTube e link README | Ainda precisamos concluir |
+| Ir Além 2 vídeo até quatro minutos não listado | 5 | [YouTube](https://youtu.be/-v9lWpZ_JJo) e link README | Publicamos em 01/11/2026; conferimos 2min59s, indicação não listado e reprodução sem login |
 | Clareza, organização e revisão de evidências | Todas | Roteiro e pacote final | Estamos acompanhando as evidências |
 
 SPIFFS e hardware físico não são obrigatórios segundo o enunciado fornecido; Grafana é opcional. A implementação Serial da primeira entrega não satisfaz, sozinha, a Parte 2 de MQTT.
@@ -44,7 +44,7 @@ SPIFFS e hardware físico não são obrigatórios segundo o enunciado fornecido;
 - **Escolhas da implementação:** cinco segundos simulados por coleta, 2.000 posições, descarte da amostra nova quando a fila enche, reenvio em três segundos, dado atual por 15 segundos reais, histerese e confirmação em duas janelas. Sete segundos no teste de botão segurado foi uma duração de ensaio, não um critério da FIAP.
 - **Limites de alerta:** >120 BPM para pulsos artificiais e >30 °C para temperatura ambiente. O >38 °C citado no enunciado é exemplo, não obrigação de medir temperatura corporal. Zero pulsos indica ausência de acionamentos, não ausência de atividade cardíaca.
 - **Ir Além 1:** o cliente Python precisa **enviar e receber** por REST, verificar risco e simular e-mail. O endpoint de consulta do painel não satisfaz sozinho esse requisito. O relatório deve ter **uma a duas páginas**.
-- **Ir Além 2:** classificador tradicional comparado a LIF ou FHN em séries temporais, notebook comentado, código e README públicos, relatório de **duas páginas** e vídeo de **até quatro minutos**, não listado no YouTube, com link no README raiz. Ainda não temos esse vídeo; o link da Fase 2 não o substitui.
+- **Ir Além 2:** classificador tradicional comparado a LIF ou FHN em séries temporais, notebook comentado, código e README públicos, relatório de **duas páginas** e vídeo de **até quatro minutos**, não listado no YouTube, com link no README raiz. Publicamos o [vídeo específico da Fase 3](https://youtu.be/-v9lWpZ_JJo); o link da Fase 2 permanece preservado.
 
 Mantemos os dois desafios no escopo por decisão do grupo, seguindo a Fase 2. Eles não constam na distribuição dos dez pontos acima; não afirmamos bonificação nem obrigação geral não expressa no enunciado.
 
@@ -118,10 +118,11 @@ Concluímos que código, notebook, comparação e relatório estão implementado
 - [x] Concluímos a revisão técnica dos relatórios REST/e-mail e tradicional/LIF em 28/10/2026.
 - [x] Executamos o cliente REST e a simulação de e-mail, com consulta após reinício e evidências preservadas.
 - [x] Executamos os dois modelos nas mesmas sessões de teste e preservamos métricas, previsões, divisão e notebook executado.
-- [ ] Publicar o vídeo específico do Ir Além 2 e inserir o link no README raiz.
+- [x] Publicamos o [vídeo específico do Ir Além 2](https://youtu.be/-v9lWpZ_JJo) e inserimos o link no README raiz em 01/11/2026.
 - [x] Reproduzimos instalação e serviços em cópia nova, conferimos REST após reinício e concluímos a repetição visual acompanhada no Wokwi: sensores, entrada/retorno dos alertas e recuperação pela chave. Preservamos 41 medições únicas sem lacunas ou perdas na [validação guiada de 27/10](../other/fase3/evidencias/2026-10-27/reproducao/validacao_guiada/RESULTADOS.md). A operação acompanhada está identificada separadamente do ensaio de rede Python.
 - [x] Conferimos acesso público aos repositórios, dois Wokwi, pastas do Drive, portal e vídeo da Fase 2; reativamos o Streamlit em repouso e confirmamos sua página inicial. Preservamos os links anteriores.
-- [ ] Publicar e conferir o novo vídeo do Ir Além 2 sem autenticação obrigatória.
+- [x] Conferimos a indicação de vídeo não listado e iniciamos a reprodução sem autenticação em 01/11/2026.
+- [x] Conferimos o conteúdo narrado pela transcrição automática disponibilizada durante a consulta de 01/11/2026: integrantes, dados, divisão, modelos, resultados e análise crítica. Mantemos a ressalva de possíveis erros de reconhecimento nas legendas.
 - [x] Conferimos os três integrantes/RMs no README e nos quatro relatórios.
 - [ ] Conferir o cadastro efetivo do grupo na plataforma antes do envio: o recorte fornecido lista apenas um participante, enquanto o projeto identifica três integrantes.
 - [ ] Conferir o arquivo correto, enviar pela plataforma com antecedência e reabrir/baixar o arquivo enviado para confirmar o conteúdo. A imagem de orientação avisa que não é possível substituir o arquivo após o fechamento da entrega ou a correção.
@@ -140,6 +141,10 @@ Os dois links Wokwi continuam identificados por finalidade. Nesta auditoria, as 
 ## Atualização da revisão técnica de 28/10/2026
 
 Concluímos a revisão dos quatro relatórios, a validação guiada dos dois desafios implementados e a conferência dos links públicos e dos integrantes nos documentos. Os nove testes de modelos/exportação passaram, além dos testes de contratos, persistência, REST e painel. A [conferência do pacote](../other/fase3/evidencias/2026-10-28/REVISAO_ENTREGA.md) atualiza as pendências da auditoria histórica acima: faltam o vídeo do Ir Além 2, a conferência do cadastro/formatos na plataforma e o envio. O vídeo da Fase 2 foi preservado.
+
+## Atualização da publicação do vídeo — 01/11/2026
+
+Publicamos o [Ir Além 2 no YouTube](https://youtu.be/-v9lWpZ_JJo). Conferimos o título, a indicação **Não listado**, a duração exibida de **2:59** e o início da reprodução sem login. Na versão local, medimos 179,25805 segundos e inspecionamos gráficos, matrizes, métricas, metodologia e análise crítica nas telas. Registramos o escopo e os limites da conferência em [publicação e acesso](../other/fase3/evidencias/2026-11-01/video/RESULTADOS.md). Esta atualização sucede as pendências de gravação/publicação dos registros históricos acima. Conferimos ainda a transcrição automática completa com os dados do experimento; as legendas podem conter erros de reconhecimento e não equivalem a escuta integral. Não declaramos submissão na FIAP.
 
 ## Regras da plataforma para o fechamento
 
