@@ -2,7 +2,7 @@
 
 Implementamos o protótipo ESP32 → MQTT → consumidor SQLite → painel Node-RED. Este guia permite reproduzir coleta, interrupção, recuperação e alertas sem depender do ambiente utilizado pelo grupo.
 
-**Situação reavaliada em 01/11/2026:** validamos as implementações Edge, MQTT e Node-RED. Produzimos o [relatório Edge de duas páginas](CardioIA_Fase3_Relatorio_Edge.pdf) e o [relatório MQTT/dashboard de quatro páginas](CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf), com paginação conferida e revisão técnica concluída em 28/10/2026. Implementamos e testamos localmente o [Ir Além 1 REST](rest/README.md); concluímos sua validação guiada e produzimos o [relatório de duas páginas](CardioIA_Fase3_Relatorio_REST_Email.pdf), com revisão técnica concluída em 28/10/2026. Implementamos e testamos o [Ir Além 2](neuromorfismo/README.md), com notebook executado e [relatório comparativo de duas páginas](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf); concluímos a validação guiada, com revisão técnica concluída e [vídeo publicado de 2min59s](https://youtu.be/-v9lWpZ_JJo), não listado e com reprodução sem login conferida. A [matriz do enunciado](CHECKLIST_ENUNCIADO.md) relaciona requisitos, evidências e pendências; o [roteiro](ROTEIRO_ENTREGA.md) organiza o trabalho restante. O prazo informado é **04/11/2026, às 23h59**.
+**Entregáveis:** concluímos as implementações e validações das Partes 1 e 2 e dos dois desafios. Disponibilizamos os relatórios [Edge — duas páginas](CardioIA_Fase3_Relatorio_Edge.pdf), [MQTT/dashboard — quatro páginas](CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf), [REST/e-mail — duas páginas](CardioIA_Fase3_Relatorio_REST_Email.pdf) e [tradicional/LIF — duas páginas](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf), além do [vídeo não listado de 2min59s](https://youtu.be/-v9lWpZ_JJo). O [documento de submissão](CardioIA_Fase3_Documento_de_Submissao.pdf) reúne os acessos para avaliação. A [matriz de requisitos](CHECKLIST_ENUNCIADO.md) relaciona exigências, evidências e pendências de envio na FIAP.
 
 ## Qual Wokwi utilizar
 
@@ -298,7 +298,7 @@ Executar a consulta após o consumidor iniciar e receber dados. A chave é `(dev
 5. Conferir os nove testes, as mesmas 48 sessões de teste e a análise crítica.
 6. Revisar o [relatório comparativo](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf). O [vídeo de 2min59s](https://youtu.be/-v9lWpZ_JJo) apresenta resultados e análise crítica e está publicado como não listado, com link no README raiz.
 
-**Resultado da referência:** tradicional com 44/48 acertos e LIF com 35/48, sem usar o teste para selecionar parâmetros. Os sinais são sintéticos e a rede LIF tem leitura logística treinada. Esta trilha não depende de Wokwi ou servidores. Publicamos o vídeo em 01/11/2026 e conferimos duração, visibilidade e reprodução sem login.
+**Resultado da referência:** tradicional com 44/48 acertos e LIF com 35/48, sem usar o teste para selecionar parâmetros. Os sinais são sintéticos e a rede LIF tem leitura logística treinada. Esta trilha não depende de Wokwi ou servidores. Publicamos o vídeo e conferimos duração, visibilidade e reprodução sem login.
 
 ## Etapa 5 — Conferir o que foi concluído
 
@@ -311,7 +311,7 @@ Executar a consulta após o consumidor iniciar e receber dados. A chave é `(dev
 - [ ] Encerramos os serviços sem apagar bancos ou evidências.
 - [ ] Executamos a comparação tradicional/LIF, abrimos o notebook executado e conferimos testes e limites.
 
-Esta lista é para quem reproduz marcar durante seu próprio teste. O **Ir Além 2 possui implementação, notebook e relatório**, com reprodução detalhada no guia; concluímos a validação guiada e publicamos o vídeo em 01/11/2026. Os [relatórios](../../document/README.md) e as evidências complementam a avaliação, sem substituir a execução acima.
+Esta lista é para quem reproduz marcar durante seu próprio teste. O **Ir Além 2 possui implementação, notebook e relatório**, com reprodução detalhada no guia; concluímos a validação guiada e publicamos o vídeo. Os [relatórios](../../document/README.md) e as evidências complementam a avaliação, sem substituir a execução acima.
 
 ## Teste adicional — reenvio e deduplicação
 
@@ -363,4 +363,4 @@ Uma leitura atual exige `age_ms <= 10000`, `backlog_samples == 1`, recebimento l
 
 O inicializador carrega o export e suas dependências. Para importar em outra instância, instalar FlowFuse Dashboard e disponibilizar `monitor.js` por `config/fase3/node-red/settings.js`. O JSON sozinho não inclui essa configuração. Consultar o [guia Node-RED](node-red/README.md).
 
-Os registros Markdown e prints comprovam testes, mas **não substituem os relatórios com mínimos de páginas**. Produzimos os relatórios Edge (duas páginas) e MQTT/dashboard (quatro páginas), disponíveis no início deste guia. Implementamos cliente REST, regras e e-mail simulado no [Ir Além 1](rest/README.md), com sete testes locais; concluímos sua validação guiada e produzimos o relatório de duas páginas, com revisão técnica concluída em 28/10/2026. Implementamos e testamos o [Ir Além 2](neuromorfismo/README.md), com comparação tradicional × LIF, notebook executado e relatório de duas páginas. Concluímos a validação guiada; publicamos o vídeo não listado de 2min59s, vinculado ao README raiz. O endpoint de consulta do painel não satisfaz esses desafios.
+Os registros Markdown e prints comprovam testes, mas **não substituem os relatórios com mínimos de páginas**. Produzimos os relatórios Edge (duas páginas) e MQTT/dashboard (quatro páginas), disponíveis no início deste guia. Implementamos cliente REST, regras e e-mail simulado no [Ir Além 1](rest/README.md), com sete testes locais; concluímos sua validação guiada e produzimos o relatório de duas páginas. Implementamos e testamos o [Ir Além 2](neuromorfismo/README.md), com comparação tradicional × LIF, notebook executado e relatório de duas páginas. Concluímos a validação guiada; publicamos o vídeo não listado de 2min59s, vinculado ao README raiz. O endpoint de consulta do painel não satisfaz esses desafios.

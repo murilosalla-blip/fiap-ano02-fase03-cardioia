@@ -18,7 +18,7 @@ Na Fase 1, preparamos dados numéricos, textuais e visuais. Na Fase 2, implement
 |---|---|
 | 1 | [Guia e submissão](fase1/README.md) |
 | 2 | [Execução](fase2/README.md) e [relatório da entrega](fase2/RELATORIO_ENTREGA.md) |
-| 3 | [Execução](fase3/README.md), [roteiro](fase3/ROTEIRO_ENTREGA.md) e [checklist](fase3/CHECKLIST_ENUNCIADO.md) |
+| 3 | [Execução](fase3/README.md) e [checklist](fase3/CHECKLIST_ENUNCIADO.md) |
 
 ## 3. Desenvolvimento
 
@@ -44,7 +44,7 @@ Na Fase 3, validamos coleta offline, retomada, reenvio, deduplicação, pulsos, 
 
 ## 5. Conclusões e trabalhos futuros
 
-Concluímos a base de dados e os experimentos das Fases 1 e 2 e validamos as três primeiras entregas práticas da Fase 3. Implementamos e validamos REST/e-mail e produzimos seu [relatório de duas páginas](fase3/CardioIA_Fase3_Relatorio_REST_Email.pdf). Implementamos a [comparação tradicional/LIF](fase3/neuromorfismo/README.md), executamos o notebook em ambiente novo e produzimos o relatório de duas páginas. Concluímos a validação guiada dessa trilha em 28/10/2026, incluindo gráficos, notebook completo e seis testes com `OK`. Concluímos a revisão técnica dos quatro relatórios em 28/10/2026 e conferimos links e identificação dos integrantes. Publicamos o [vídeo do Ir Além 2](https://youtu.be/-v9lWpZ_JJo) em 01/11/2026, com duração de 2min59s e acesso sem login conferido. Ainda precisamos concluir o fechamento e a submissão na FIAP. Produzimos os relatórios obrigatórios de [Edge](fase3/CardioIA_Fase3_Relatorio_Edge.pdf) e [MQTT/dashboard](fase3/CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf), com paginação conferida; concluímos a revisão técnica em 28/10/2026. Mantemos o acompanhamento no [roteiro da Fase 3](fase3/ROTEIRO_ENTREGA.md).
+Concluímos a base de dados e os experimentos das Fases 1 e 2 e validamos as três primeiras entregas práticas da Fase 3. Implementamos e validamos REST/e-mail e produzimos seu [relatório de duas páginas](fase3/CardioIA_Fase3_Relatorio_REST_Email.pdf). Implementamos a [comparação tradicional/LIF](fase3/neuromorfismo/README.md), executamos o notebook em ambiente novo e produzimos o relatório de duas páginas. Concluímos a validação guiada dessa trilha em 28/10/2026, incluindo gráficos, notebook completo e seis testes com `OK`. Concluímos a revisão técnica dos quatro relatórios em 28/10/2026 e conferimos links e identificação dos integrantes. Publicamos o [vídeo do Ir Além 2](https://youtu.be/-v9lWpZ_JJo) em 01/11/2026, com duração de 2min59s e acesso sem login conferido. Ainda precisamos concluir o fechamento e a submissão na FIAP. Produzimos os relatórios obrigatórios de [Edge](fase3/CardioIA_Fase3_Relatorio_Edge.pdf) e [MQTT/dashboard](fase3/CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf), com paginação conferida; concluímos a revisão técnica em 28/10/2026. Relacionamos requisitos, evidências e pendências na [matriz da Fase 3](fase3/CHECKLIST_ENUNCIADO.md).
 
 ## 6. Referências
 

@@ -20,7 +20,7 @@ Dos 223 itens anteriores, conferimos 212 arquivos presentes e identificamos os 1
 
 Mantemos os logs funcionais e as capturas do Wokwi, os estados de `teste_rede_final/`, os registros de estabilidade e a validação guiada do painel. Retiramos somente o primeiro ensaio substituído, preservando as evidências finais. Mantemos os diagramas e cabeçalhos compartilhados nas duas pastas do firmware, pois cada projeto Wokwi precisa dos próprios arquivos locais.
 
-Preservamos os 18 endereços externos originais do README, registrados em [links_externos_preservados.json](links_externos_preservados.json), incluindo as três pastas do Drive e o vídeo da Fase 2. Os repositórios históricos das [Fases 1](https://github.com/murilosalla-blip/fiap-ano02-fase01-cardioia) e [2](https://github.com/murilosalla-blip/fiap-ano02-fase02-cardioia) mantêm seus fechamentos originais. Não alteramos esses repositórios nesta higienização.
+Preservamos os 18 endereços externos originais, registrados em [links_externos_preservados.json](links_externos_preservados.json), incluindo as três pastas do Drive e o vídeo da Fase 2. Os repositórios históricos das [Fases 1](https://github.com/murilosalla-blip/fiap-ano02-fase01-cardioia) e [2](https://github.com/murilosalla-blip/fiap-ano02-fase02-cardioia) mantêm seus fechamentos originais. Não alteramos esses repositórios nesta higienização.
 
 ## Publicações e dados locais
 
@@ -32,13 +32,13 @@ Reavaliamos os documentos por finalidade, sem equiparar “não obrigatório” 
 |---|---|
 | Roteiro de narração do vídeo do Ir Além 2 | Mantemos apenas a cópia local em `document/fase3/neuromorfismo/ROTEIRO_VIDEO.md`, ignorada por regra explícita. Retiramos do índice Git e removemos referências dos guias públicos e do documento de submissão. É preparação interna, não evidência de vídeo entregue. |
 | Novos ensaios de fala, rascunhos e anotações de trabalho | Reservamos `.tools/interno/`, já coberto pela regra `.tools/` do `.gitignore`. Não colocamos nesses diretórios código, guias ou evidências necessárias à entrega. |
-| `ROTEIRO_ENTREGA.md` e `CHECKLIST_ENUNCIADO.md` | Mantemos públicos: relacionam escopo, requisitos, evidências e pendências, oferecendo rastreabilidade ao avaliador. O roteiro de entrega não é roteiro de fala. |
+| Planejamento e matriz de requisitos | Mantemos o roteiro de planejamento apenas como material interno em `.tools/interno/fase3/`. A matriz `CHECKLIST_ENUNCIADO.md` permanece pública, relacionando exigências, evidências e pendências para avaliação. |
 | READMEs, contratos, instalação, testes e guias de validação | Mantemos públicos: necessários à compreensão e reprodução das atividades. |
 | Quatro relatórios e documento de submissão da Fase 3 | Mantemos públicos: são entregáveis ou acessos centrais para avaliação; o vídeo permanece pendente. |
 | Logs finais, capturas, métricas, notebooks e registros de revisão | Mantemos públicos: comprovam execuções e limites, distinguindo verificações automatizadas de validações acompanhadas. |
 | Estudos de requisitos, referências e registros de organização/preservação | Mantemos como apoio em `document/other/`: contextualizam decisões e a continuidade das fases. Preservamos os materiais históricos das Fases 1 e 2. |
 
-Nesta revisão, classificamos para retirada pública somente um documento existente: o roteiro de narração. Não apagamos sua cópia local. O `.gitignore` impede novas inclusões acidentais, mas não remove versões antigas do histórico; o material continua recuperável no commit anterior `6710241de52d1906ef1c21a1f496c70d7330c891`. A retirada passa a valer no GitHub após publicar e integrar a alteração.
+Na primeira separação, classificamos para retirada pública o roteiro de narração. Posteriormente também reservamos o roteiro de planejamento para uso interno. Não apagamos sua cópia local. O `.gitignore` impede novas inclusões acidentais, mas não remove versões antigas do histórico; o material continua recuperável no commit anterior `6710241de52d1906ef1c21a1f496c70d7330c891`. A retirada passa a valer no GitHub após publicar e integrar a alteração.
 
 Não usamos padrões como `*.md`, `*.pdf` ou `document/other/` no `.gitignore`, pois ocultariam materiais úteis ou essenciais. Ao compartilhar este projeto por ZIP fora do Git, selecionar os arquivos da entrega: `.gitignore` não impede anexar arquivos locais manualmente.
 
@@ -86,3 +86,17 @@ Consolidamos a [conferência final de reprodução de 27/10](../fase3/evidencias
 Na continuação da mesma revisão, concluímos a repetição visual acompanhada do Wokwi e conferimos 41 medições únicas sem lacunas nem perdas, com entrada/retorno dos dois alertas e recuperação pela chave. A [conferência guiada](../fase3/evidencias/2026-10-27/reproducao/validacao_guiada/RESULTADOS.md) encerra a pendência visual registrada nas tentativas anteriores.
 
 Na continuação de 27/10, implementamos o Ir Além 2 em `src/fase3/neuromorfismo/` e `src/fase3/notebooks/`, com dependências próprias, resultados em `assets/fase3/resultados/neuromorfismo/` e guia em `document/fase3/neuromorfismo/`. Executamos os seis testes e o notebook em ambiente novo. Produzimos o relatório comparativo de duas páginas. Não alteramos os dados, programas ou PDFs históricos das Fases 1 e 2. Mantemos validação guiada, revisão do grupo, publicação e vídeo pendentes. Os resultados locais e seus limites estão registrados em `document/other/fase3/evidencias/2026-10-27/neuromorfismo/`.
+
+## Consolidação da navegação por fase
+
+Concentramos apresentação, materiais externos, relatórios, vídeo e reprodução dentro de cada fase do README. Retiramos a seção de vídeos e a lista paralela de links; a preparação do ambiente permanece comum às trilhas. Mantemos apenas registros executivos no histórico e retiramos datas operacionais dos textos de apresentação.
+
+Preservamos localmente o planejamento em `.tools/interno/fase3/ROTEIRO_ENTREGA.md`. Registramos sua retirada individual e os hashes de recuperação em `higienizacao.json`; a versão anterior continua recuperável no histórico Git. A regra de verificação permite somente esse documento na categoria de planejamento interno, sem autorizar retirar relatórios, código ou dados.
+
+Os dois endereços antigos do repositório renomeado ficam neste registro: [endereço original](https://github.com/murilosalla-blip/fiap-ano02-fase01-cap01-cardioia) e [URL Git original](https://github.com/murilosalla-blip/fiap-ano02-fase01-cap01-cardioia.git). Eles redirecionam ao repositório atual. Os links de materiais da Fase 1, aplicações, portal e vídeos permanecem dentro das respectivas fases no README.
+
+Conferimos esta reorganização em cópia nova, com ambiente Python e dependências Node-RED instalados do zero: 23 testes REST/MQTT, 19 do painel, nove de IA/exportação e nove de preservação aprovados. Executamos novamente a comparação e o notebook completo; mantivemos os resultados de referência. Os validadores confirmaram a preservação dos conteúdos anteriores e dos links locais. Conferimos visualmente as seis páginas do documento de submissão atualizado.
+
+Os dois Wokwi, três pastas Drive, repositórios, portal e dois vídeos responderam à consulta HTTP. O endereço Streamlit apresentou ciclo de redirecionamento; a ferramenta de navegador ficou indisponível, portanto não confirmamos sua interface nesta revisão. Mantivemos o link histórico e o caminho de execução local da Fase 2. Não repetimos uma sessão visual do Wokwi: preservamos as evidências guiadas anteriores. Os logs desta conferência ficam em `.tools/auditoria-readme-20261101/`, fora da entrega pública.
+
+A tentativa adicional de recompilar os testes C++ foi interrompida após demora na preparação do compilador local, sem resultado novo. Não alteramos firmware; mantemos os resultados C++ anteriores, separados dos 60 testes Python/Node aprovados nesta revisão.

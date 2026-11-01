@@ -26,6 +26,7 @@ def carregar_retirados(raiz=ROOT):
             p.parent.as_posix() == "document/other/fase3/evidencias/2026-10-24/dashboard/teste_rede"
             or categoria == "registro_consolidado" and p.parent.as_posix() == "document/other/organizacao" and p.name in consolidacoes
             or categoria == "workflow_inativo" and caminho == "src/fase2/portal-cardioia/.github/workflows/deploy-pages.yml"
+            or categoria == "planejamento_interno" and caminho == "document/fase3/ROTEIRO_ENTREGA.md"
         )
         assert permitido, "Retirada fora do escopo de apoio: " + caminho
         assert caminho not in retirados, "Retirada duplicada: " + caminho
@@ -35,6 +36,26 @@ def carregar_retirados(raiz=ROOT):
         assert not (raiz / caminho).exists(), "Arquivo retirado ainda presente: " + caminho
         retirados[caminho] = item
     return retirados
+
+
+def verificar_links_preservados(raiz=ROOT):
+    """Preservamos materiais e permitimos realocar só os dois aliases históricos."""
+    registro = json.loads((raiz / "document/other/organizacao/links_externos_preservados.json").read_text(encoding="utf-8"))
+    realocados = registro.get("realocados", {})
+    aliases = {
+        "https://github.com/murilosalla-blip/fiap-ano02-fase01-cap01-cardioia",
+        "https://github.com/murilosalla-blip/fiap-ano02-fase01-cap01-cardioia.git",
+    }
+    assert set(realocados) <= aliases, "Realocação de link essencial não autorizada"
+    erros = []
+    for url in registro["urls"]:
+        arquivo = realocados.get(url, "README.md")
+        assert arquivo in {"README.md", "document/other/organizacao/README.md"}, "Destino de link não autorizado"
+        texto = (raiz / arquivo).read_text(encoding="utf-8")
+        urls = set(re.findall(r"https?://[^\s<>\"')]+", texto))
+        if url not in urls:
+            erros.append(f"Link externo removido: {arquivo} -> {url}")
+    assert not erros, "\n".join(erros)
 
 
 def verificar():
@@ -49,12 +70,7 @@ def verificar():
         for category in ("src", "assets", "config", "document"):
             if not (ROOT / category / phase).is_dir():
                 erros.append(f"Fase sem agrupamento: {category}/{phase}")
-    links_externos = json.loads((ROOT / "document/other/organizacao/links_externos_preservados.json").read_text(encoding="utf-8"))
-    readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    urls_atuais = set(re.findall(r"https?://[^\s<>\"')]+", readme))
-    for url in links_externos["urls"]:
-        if url not in urls_atuais:
-            erros.append("Link externo removido do README: " + url)
+    verificar_links_preservados()
     padronizacao = json.loads((ROOT / "document/other/organizacao/mudancas_padronizacao.json").read_text(encoding="utf-8"))
     for item in padronizacao["arquivos"]:
         if item["depois"] in retirados:
