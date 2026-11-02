@@ -28,7 +28,7 @@ Após parar os acionamentos, conferimos a leitura 19 com 48 BPM e as seguintes c
 - [Estado com retorno confirmado](retorno_pulsos_estado.json).
 - [Captura após o retorno](painel_retorno_pulsos.png).
 
-Concluímos a entrada e o retorno do alerta de pulsos nesta sessão. Prosseguimos com temperatura ambiente e interrupção/recuperação, ainda pendentes nesta repetição.
+Concluímos a entrada e o retorno do alerta de pulsos nesta sessão.
 
 ## Entrada e retorno do alerta de temperatura
 
@@ -55,4 +55,4 @@ Na consulta preservada, encontramos 41 medições únicas, sequências 1 a 41, s
 - [Captura do painel após recuperação](painel_recuperacao.png).
 - [Conferência final dos dados](conferencia_final.json).
 
-**Conclusão da repetição acompanhada:** conferimos conexão, coleta e confirmação, gráfico de pulsos, entrada e retorno dos dois alertas, mudança de temperatura, interrupção pela chave e recuperação ordenada sem perdas. A operação dos controles foi acompanhada, com conferência da tela no Chrome, do Serial, dos eventos e do SQLite; não apresentamos a execução como uma automação autônoma integral. Esta conclusão sucede as pendências intermediárias registradas acima e não representa submissão na FIAP.
+**Conclusão da repetição acompanhada:** conferimos conexão, coleta e confirmação, gráfico de pulsos, entrada e retorno dos dois alertas, mudança de temperatura, interrupção pela chave e recuperação ordenada sem perdas. A operação dos controles foi acompanhada, com conferência da tela no Chrome, do Serial, dos eventos e do SQLite; não apresentamos a execução como uma automação autônoma integral.

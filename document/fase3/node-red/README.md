@@ -81,7 +81,7 @@ Ao encerrar o ensaio, pressionar Ctrl+C no terminal do servidor e fechar os term
 
 Usamos diretório de execução e tópicos separados para não misturar esse ensaio com as medições do Wokwi. Não mantivemos o inicializador do consumidor integrado no modo de ensaio.
 
-Registramos resultados e limitações em [Nossas evidências](../../other/fase3/evidencias/2026-10-24/dashboard/RESULTADOS.md). Concluímos a validação visual guiada e preservamos as capturas e a conferência do banco em [Nossa revisão final](../../other/fase3/evidencias/2026-10-24/dashboard/validacao_guiada/RESULTADOS.md).
+Registramos resultados e limitações em [Nossas evidências](../../other/fase3/evidencias/2026-10-24/dashboard/RESULTADOS.md). As capturas e os resultados do banco estão nos [testes do painel](../../other/fase3/evidencias/2026-10-24/dashboard/validacao_guiada/RESULTADOS.md).
 
 ## Referências que consultamos
 
@@ -89,16 +89,16 @@ Registramos resultados e limitações em [Nossas evidências](../../other/fase3/
 - [FlowFuse Dashboard](https://dashboard.flowfuse.com/getting-started.html)
 - [Widgets Vue no ui-template](https://dashboard.flowfuse.com/nodes/widgets/ui-template.html)
 
-## Nossa revisão da exibição durante interrupções
+## Exibição durante interrupções
 
-Preservamos os últimos valores nos indicadores, com identificação de desatualização, em vez de fazê-los desaparecer a cada intervalo sem dados. Mantivemos a avaliação atual e os alertas separados desses valores históricos. Também explicitamos no gráfico quando todas as leituras registram zero acionamentos do botão. Para conferir simulador e painel simultaneamente, vamos manter as duas páginas em janelas separadas e visíveis; observamos desaceleração do Wokwi quando sua aba ficou em segundo plano.
+Preservamos os últimos valores nos indicadores, com identificação de desatualização, em vez de fazê-los desaparecer a cada intervalo sem dados. Mantivemos a avaliação atual e os alertas separados desses valores históricos. Também explicitamos no gráfico quando todas as leituras registram zero acionamentos do botão. Para conferir simulador e painel simultaneamente, manter as duas páginas em janelas separadas e visíveis; observamos desaceleração do Wokwi quando sua aba ficou em segundo plano.
 
-## Nossa correção de estabilidade do simulador
+## Conexão e atualidade das leituras
 
-Separamos conexão MQTT e atualidade dos dados. No cabeçalho, exibimos o estado real da conexão do Node-RED com o broker. No aviso principal, diferencio dispositivo offline, recuperação e espera por nova leitura. Não apresento uma leitura antiga como atual só porque o canal permanece conectado.
+Separamos conexão MQTT e atualidade dos dados. No cabeçalho, exibimos o estado real da conexão do Node-RED com o broker. No aviso principal, diferenciamos dispositivo offline, recuperação e espera por nova leitura. Não apresentamos uma leitura antiga como atual só porque o canal permanece conectado.
 
-No firmware, configuramos keepalive MQTT de 300 segundos e espera de CONNACK de cinco segundos. O prazo anterior de 15 segundos era inadequado quando o relógio do Wokwi avançava mais devagar que o relógio real do broker. Esses valores são parâmetros da demonstração, não exigências do enunciado. Aumentar o keepalive também pode atrasar o Last Will em uma falha silenciosa; por isso mantemos a detecção independente de dados sem atualização após 15 segundos reais. A chave offline continua enviando seu estado explícito.
+No firmware, configuramos keepalive MQTT de 300 segundos e espera de CONNACK de cinco segundos. Aumentar o keepalive também pode atrasar o Last Will em uma falha silenciosa; por isso mantemos a detecção independente de dados sem atualização após 15 segundos reais. A chave offline continua enviando seu estado explícito.
 
 Passamos a conferir a consecutividade dos alertas pela sequência e pelas janelas de coleta no relógio do ESP32. Uma desaceleração do navegador não apaga a primeira janela válida. Uma lacuna de sequência, recuperação de histórico ou desconexão explícita interrompe essa confirmação. Leituras repetidas continuam sem contar como novas janelas.
 
-Compilamos o firmware corrigido, salvamos no mesmo projeto público do Wokwi e executamos 19 testes locais com sucesso. Observamos a nova sessão por aproximadamente 101 segundos, com duas leituras e nenhuma interrupção de conexão. Também conferimos desconexão e reconexão reais pela chave. Preservamos esses registros em `document/other/fase3/evidencias/2026-10-24/dashboard/estabilidade/`.
+Os [registros de estabilidade](../../other/fase3/evidencias/2026-10-24/dashboard/estabilidade/RESULTADOS.md) apresentam os testes de desconexão e reconexão.

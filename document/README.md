@@ -4,15 +4,15 @@ Organizamos os documentos exigidos pelas atividades dentro de `document/fase1/`,
 
 ## Documentos principais por fase
 
-| Fase | Guia atual e requisitos | Documento da entrega | Situação |
-|---|---|---|---|
-| 1 | [README e fontes](fase1/README.md), guias numérico, textual e visual na mesma pasta | [Documento da Fase 1 — cinco páginas](fase1/cardioia_fase1_entrega_fiap.pdf) | Preservamos o documento da entrega anterior |
-| 2 | [README e reprodução](fase2/README.md), [checklist](fase2/CHECKLIST_ENUNCIADO.md), [relatório de apoio](fase2/RELATORIO_ENTREGA.md) | [Documento de submissão da Fase 2 — seis páginas](fase2/CardioIA_Fase2_Documento_de_Submissao.pdf) | Preservamos o documento consolidado da entrega anterior |
-| 3 | [Reprodução completa](fase3/README.md) e [matriz de requisitos](fase3/CHECKLIST_ENUNCIADO.md) | [Documento de submissão](fase3/CardioIA_Fase3_Documento_de_Submissao.pdf); relatórios [Edge](fase3/CardioIA_Fase3_Relatorio_Edge.pdf), [MQTT/dashboard](fase3/CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf), [REST/e-mail](fase3/CardioIA_Fase3_Relatorio_REST_Email.pdf) e [tradicional/LIF](fase3/CardioIA_Fase3_Relatorio_Neuromorfismo.pdf) | Implementações, relatórios, validações e vídeo disponíveis; envio na FIAP pendente |
+| Fase | Guia atual e requisitos | Documento da entrega |
+|---|---|---|
+| 1 | [README e fontes](fase1/README.md), guias numérico, textual e visual na mesma pasta | [Documento da Fase 1 — cinco páginas](fase1/cardioia_fase1_entrega_fiap.pdf) |
+| 2 | [README e reprodução](fase2/README.md), [checklist](fase2/CHECKLIST_ENUNCIADO.md), [relatório de apoio](fase2/RELATORIO_ENTREGA.md) | [Documento de submissão da Fase 2 — seis páginas](fase2/CardioIA_Fase2_Documento_de_Submissao.pdf) |
+| 3 | [Reprodução completa](fase3/README.md) e [matriz de requisitos](fase3/CHECKLIST_ENUNCIADO.md) | [Documento de submissão](fase3/CardioIA_Fase3_Documento_de_Submissao.pdf); relatórios [Edge](fase3/CardioIA_Fase3_Relatorio_Edge.pdf), [MQTT/dashboard](fase3/CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf), [REST/e-mail](fase3/CardioIA_Fase3_Relatorio_REST_Email.pdf) e [tradicional/LIF](fase3/CardioIA_Fase3_Relatorio_Neuromorfismo.pdf) |
 
 O [AI Project Document](ai_project_document_fiap.md) apresenta a evolução consolidada. O [README raiz](../README.md) identifica o grupo, explica as fases, mantém os links públicos e orienta a execução.
 
-Para anexar a Fase 3 na plataforma, preparamos o [documento de submissão — seis páginas](fase3/CardioIA_Fase3_Documento_de_Submissao.pdf). Reunimos identificação, resumo das atividades, resultados e acessos aos códigos, quatro relatórios e evidências. O documento inclui o link do vídeo do Ir Além 2, com duração de 2min59s, visibilidade não listada e reprodução sem login conferidas. A confirmação do envio na FIAP permanece pendente. Esse documento orienta o acesso ao material e não substitui os relatórios específicos.
+O documento de submissão da Fase 3 reúne a identificação do grupo, os links das atividades, os relatórios, os resultados e o vídeo do Ir Além 2.
 
 ## Originais e caminhos atuais
 
@@ -33,5 +33,3 @@ O [mapa de arquivos](other/organizacao/mapa_arquivos.json) e o [registro consoli
 - [Enunciados e fontes utilizadas por fase](other/referencias/README.md).
 - [Organização e verificação de preservação](other/organizacao/README.md).
 - [Evidências dos testes da Fase 3](other/fase3/evidencias/).
-
-Registramos requisito, arquivo, evidência e situação sem confundir plano, teste e entrega concluída. Os registros e capturas da Fase 3 apoiam os relatórios, mas não substituem seus mínimos de páginas nem o envio na plataforma FIAP.

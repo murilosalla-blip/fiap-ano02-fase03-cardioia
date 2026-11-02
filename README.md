@@ -223,14 +223,9 @@ Discutimos desempenho, erros, representações diferentes, dados artificiais e i
 - **Reprodução:** [guia completo](document/fase3/neuromorfismo/README.md), com instalação, gráficos, notebook e nove testes.
 - **Resultados:** [métricas, matrizes, previsões e divisão das sessões](assets/fase3/resultados/neuromorfismo/).
 - **Relatório:** [comparação tradicional/LIF — duas páginas](document/fase3/CardioIA_Fase3_Relatorio_Neuromorfismo.pdf).
-- **Vídeo:** [Ir Além 2 — YouTube não listado, 2min59s](https://youtu.be/-v9lWpZ_JJo), com resultados e análise crítica.
-- **Conferência:** [gráficos, transcrição automática e acesso ao vídeo](document/other/fase3/evidencias/2026-11-01/video/RESULTADOS.md).
+- **Vídeo:** [Ir Além 2 — YouTube não listado](https://youtu.be/-v9lWpZ_JJo), com resultados e análise crítica.
 
-### Documentação e situação da entrega
-
-O [guia passo a passo da Fase 3](document/fase3/README.md) reúne preparação, execução, resultados esperados e diagnóstico. A [matriz de requisitos](document/fase3/CHECKLIST_ENUNCIADO.md) relaciona as exigências às implementações e evidências. O [documento de submissão — seis páginas](document/fase3/CardioIA_Fase3_Documento_de_Submissao.pdf) concentra os acessos para avaliação.
-
-As implementações, relatórios, testes e vídeo estão disponíveis. Restam a conferência do cadastro do grupo, das regras de upload e o envio confirmado na FIAP. Publicar no GitHub e no YouTube não substitui a submissão acadêmica. Os desafios são parte do escopo escolhido pelo grupo; não atribuímos pontuação adicional nem antecipamos nota.
+O [guia da Fase 3](document/fase3/README.md) detalha a execução. O [documento de submissão](document/fase3/CardioIA_Fase3_Documento_de_Submissao.pdf) reúne os acessos às atividades e aos relatórios.
 
 ### ▶️ Como executar a Fase 3
 
@@ -317,12 +312,11 @@ Invoke-Item .tools/runtime/fase3/neuromorfismo/comparacao_temporal_lif.html
 - Seguir os [oito passos de execução e conferência](document/fase3/neuromorfismo/README.md), incluindo nove testes (seis dos modelos e três de exportação). Os programas terminam sozinhos; não há servidor para encerrar.
 - A classificação compara regimes artificiais, sem diagnóstico ou medição de economia energética.
 
-#### 8. Conferir a entrega e os próximos passos
+#### 8. Conferir os resultados
 
 - Marcar a lista de conferência no [guia da Fase 3](document/fase3/README.md) somente após observar cada resultado.
 - Para verificações adicionais de contrato, fila e confirmações, seguir o [guia de testes](document/fase3/tests/README.md).
 - Consultar os relatórios e as evidências pelo [índice da documentação](document/README.md).
-- O **Ir Além 2 está implementado e testado localmente**. Concluímos a validação guiada e publicamos o vídeo; restam a conferência do cadastro do grupo e o envio na FIAP, acompanhados na [matriz de requisitos](document/fase3/CHECKLIST_ENUNCIADO.md#aceite-antes-da-submissão).
 
 #### Se algum passo não funcionar
 
@@ -333,7 +327,7 @@ Invoke-Item .tools/runtime/fase3/neuromorfismo/comparacao_temporal_lif.html
 - **MQTT não conecta:** conferir internet, acesso TCP 1883, serviço consumidor e Wokwi da Parte 2. Preservar a mensagem de erro; a disponibilidade do broker público é externa ao projeto.
 - **Dependência ou download falhou:** não continuar o treinamento; guardar a saída e conferir conexão e requisitos. Os arquivos e resultados já entregues continuam disponíveis para inspeção.
 
-Não apagar `.tools/runtime/` para resolver problemas: ali ficam as medições e os e-mails dos testes. Reexecuções de treinamento podem substituir resultados locais; utilizar uma cópia de avaliação separada para preservar o material entregue. Confirmar as instruções da revisão baixada, pois alterações ainda locais não aparecem em um novo clone público.
+Não apagar `.tools/runtime/` para resolver problemas: ali ficam as medições e os e-mails dos testes. Reexecuções de treinamento podem substituir resultados locais; utilizar uma cópia de avaliação separada para preservar o material entregue.
 
 ## 📁 Estrutura de pastas
 
@@ -391,7 +385,7 @@ Esperar Python `3.12.x` e Node `v24.x`. Se `python` não for encontrado ou apont
 
 ### Obter o código e criar o ambiente
 
-No Windows, escolher uma pasta curta, por exemplo `C:\projetos`, com permissão de escrita. Evitar pastas muito aninhadas: a instalação limpa revelou falha de caminho longo em uma dependência de Jupyter. Se aparecer `No such file or directory` acompanhado de aviso sobre `Long Path`, criar uma nova cópia e um novo ambiente em caminho curto, preservando a anterior. Não mover um ambiente virtual existente.
+No Windows, escolher uma pasta curta, por exemplo `C:\projetos`, com permissão de escrita. Evitar pastas muito aninhadas: dependências de Jupyter podem exceder o limite de caminho do Windows. Se aparecer `No such file or directory` acompanhado de aviso sobre `Long Path`, criar uma nova cópia e um novo ambiente em caminho curto, preservando a anterior. Não mover um ambiente virtual existente.
 
 Executar o clone **na pasta onde se deseja guardar o projeto**; o comando cria a subpasta abaixo. Não clonar novamente dentro de uma cópia existente:
 
@@ -408,7 +402,7 @@ Se a cópia já existe, abrir o PowerShell nessa pasta e conferir `Test-Path .\R
 
 **Escolher a trilha:** Fase 1 para dados; Fase 2 para NLP, Streamlit e extras; Fase 3 Parte 1 somente no navegador; Parte 2 para MQTT/painel; Ir Além 1 para HTTP local; Ir Além 2 para comparar modelos de séries temporais. Não é necessário executar fases ou treinamentos anteriores para testar IoT ou REST.
 
-Utilizamos o executável do ambiente virtual sem precisar ativá-lo ou alterar a política de execução do PowerShell. No Linux/macOS, criar com `python3.12 -m venv .venv` e substituir `.venv/Scripts/python.exe` por `.venv/bin/python`, nas pastas correspondentes. Usar `cd` em lugar de `Set-Location` e `npm` em lugar de `npm.cmd` no Linux/macOS. Cada guia indica as demais diferenças de terminal; os testes locais desta revisão foram feitos no Windows, não nos três sistemas.
+Utilizamos o executável do ambiente virtual sem precisar ativá-lo ou alterar a política de execução do PowerShell. No Linux/macOS, criar com `python3.12 -m venv .venv` e substituir `.venv/Scripts/python.exe` por `.venv/bin/python`, nas pastas correspondentes. Usar `cd` em lugar de `Set-Location` e `npm` em lugar de `npm.cmd` no Linux/macOS. Os passos detalhados utilizam o PowerShell do Windows.
 
 ## 🗃 Histórico de lançamentos
 

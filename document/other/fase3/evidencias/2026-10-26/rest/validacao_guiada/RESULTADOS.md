@@ -10,4 +10,4 @@ Executamos o cliente contra o serviço HTTP local e consultamos cinco leituras d
 
 Não enviamos e-mail externo. Os valores foram gerados pelo cenário sintético do cliente, sem novas coletas do Wokwi. A raiz `/` retorna rota inexistente; utilizamos `/saude` e `/leituras` no navegador.
 
-Concluímos a validação guiada funcional. Produzimos o relatório de duas páginas, ainda sujeito à revisão final do grupo; não registramos publicação ou submissão como concluídas.
+O relatório REST/e-mail descreve o fluxo implementado e os resultados.

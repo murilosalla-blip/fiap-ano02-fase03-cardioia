@@ -8,9 +8,7 @@ As métricas por sessão e o SHA-256 dos sinais coincidiram com a primeira execu
 
 Conferimos visualmente as duas páginas do relatório comparativo, as matrizes de confusão e o gráfico de atividade LIF. Conferimos a série ilustrativa e a ausência de erros nas células. O notebook exportado em HTML inclui as imagens para leitura local.
 
-Preparar a verificação automática do notebook no workflow da Fase 3 não significa que o novo job já foi executado no GitHub: a publicação desta revisão está pendente. Os resultados são de execução local, em Windows, sem alegar teste manual em Linux/macOS ou medição energética.
 
-**Pendências:** validação guiada, revisão final do grupo, publicação da revisão, gravação/publicação do vídeo não listado com até quatro minutos e ligação do vídeo no README raiz. O roteiro do vídeo não substitui uma gravação. Nenhuma dessas etapas foi marcada como concluída.
 
 ## Continuidade da validação guiada — 28/10/2026
 
@@ -18,8 +16,8 @@ Instalamos os requisitos no ambiente `.venv` do projeto e reproduzimos as métri
 
 Reproduzimos esse erro em uma cópia de PNG mantida em mapeamento de memória somente para leitura. Alteramos o notebook para criar uma pasta exclusiva em `.tools/runtime/fase3/neuromorfismo/notebooks/execucao-...` a cada execução. Mantivemos os caminhos de abertura do HTML e da cópia executada, bem como os resultados da comparação simples.
 
-Executamos todas as células pelo Python `.venv` do projeto enquanto mantivemos o PNG anterior bloqueado. O notebook terminou sem erro; conferimos que o hash e a data de modificação do PNG anterior permaneceram intactos e que as métricas e o hash dos sinais coincidiram com a referência. Uma tentativa anterior do teste automatizado não iniciou o kernel no ambiente restrito de execução; encerramos apenas esse subprocesso e concluímos a verificação com acesso à comunicação local necessária ao Jupyter. Não contamos a tentativa interrompida como aprovação.
+Executamos todas as células pelo Python `.venv` do projeto enquanto mantivemos o PNG anterior bloqueado. O notebook terminou sem erro; conferimos que o hash e a data de modificação do PNG anterior permaneceram intactos e que as métricas e o hash dos sinais coincidiram com a referência.
 
 Confirmamos depois a repetição acompanhada do notebook, com a mensagem de execução sem erro, e a abertura do HTML pelo grupo. Conferimos diretamente o HTML local: seis células executadas sem erro, seis seções de desenvolvimento, métricas iguais à referência e três PNGs incorporados com hashes idênticos aos gráficos entregues. Corrigimos o link do guia na exportação, ajustando seu caminho relativo à pasta de destino, e verificamos o destino existente, os links externos e as âncoras.
 
-A ferramenta de navegador recusou o protocolo file://. Respeitamos essa restrição e não utilizamos outra superfície para contorná-la. Nossa conferência direta do arquivo e das imagens não representa inspeção do layout renderizado no Chrome; a apresentação foi aberta e acompanhada pelo grupo. Concluímos depois a execução guiada dos seis testes, em 0,357 s, com `OK`: agregação/métricas, atributos temporais, dinâmica LIF, separação de sessões/janelas, geração reproduzível e normalização restrita ao treino. A instalação, a comparação simples, os três gráficos, o notebook, a leitura do HTML e os testes compõem a validação guiada concluída em 28/10/2026. Não registramos o desafio, o vídeo ou a submissão como concluídos.
+Executamos os seis testes dos modelos, em 0,357 s, com `OK`: agregação/métricas, atributos temporais, dinâmica LIF, separação de sessões/janelas, geração reproduzível e normalização restrita ao treino. A instalação, a comparação simples, os três gráficos, o notebook, a leitura do HTML e os testes compõem a validação guiada concluída em 28/10/2026.

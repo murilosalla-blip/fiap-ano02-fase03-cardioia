@@ -4,7 +4,7 @@ Comparamos uma **regressão logística sobre atributos temporais** com uma **red
 
 Damos sequência aos classificadores da Fase 2 e à coleta temporal da Fase 3. As bases anteriores não são séries longitudinais de sinais vitais; por isso, geramos sessões sintéticas próprias. Não ordenamos pacientes da base Cleveland para simular tempo, não reutilizamos imagens de ECG como leituras do ESP32 e não classificamos os testes manuais do botão como diagnóstico.
 
-**Situação:** concluímos a implementação e os testes locais. Produzimos o [relatório comparativo de duas páginas](../CardioIA_Fase3_Relatorio_Neuromorfismo.pdf). Concluímos a validação guiada em 28/10/2026: instalação, comparação, três gráficos, notebook completo, HTML e seis testes com `OK`. Na revisão técnica, acrescentamos e aprovamos três testes de exportação, totalizando nove. Publicamos o [vídeo de 2min59s](https://youtu.be/-v9lWpZ_JJo) ; conferimos visibilidade não listada, reprodução sem login e inclusão do link no README raiz. Conferimos o conteúdo narrado pela transcrição automática do YouTube, distinguindo-a de escuta integral e reconhecendo possíveis erros de reconhecimento. Alterações locais só estarão disponíveis em um novo clone depois de publicadas no GitHub.
+**Relatório:** [comparação tradicional/LIF — duas páginas](../CardioIA_Fase3_Relatorio_Neuromorfismo.pdf). **Vídeo:** [YouTube não listado](https://youtu.be/-v9lWpZ_JJo).
 
 ## 🎯 O que classificamos
 
@@ -124,7 +124,7 @@ Invoke-Item .tools/runtime/fase3/neuromorfismo/comparacao_temporal_lif.html
 - A cópia executada `.ipynb` também fica nessa pasta. O notebook original em `src/fase3/notebooks/` continua preservado. Ajustamos os links locais na cópia exportada e no HTML para que o guia permaneça acessível a partir da pasta de saída.
 - Os gráficos e JSON gerados pelas células ficam em uma pasta nova dentro de `.tools/runtime/fase3/neuromorfismo/notebooks/execucao-...` a cada execução. O notebook mostra o caminho. Isso evita regravar as imagens da comparação simples que ainda possam estar abertas no visualizador do Windows; o HTML incorpora os novos gráficos.
 - Não é necessário manter o PowerShell aberto depois do término; não há servidor nesta etapa.
-- Para editar interativamente, abrir o notebook em Jupyter ou VS Code e selecionar o Python `.venv/Scripts/python.exe`. Isso é alternativo ao comando já conferido, não um pré-requisito.
+- Para editar interativamente, abrir o notebook em Jupyter ou VS Code e selecionar o Python `.venv/Scripts/python.exe`. Essa opção é alternativa ao comando do passo 6.
 
 ### Passo 7 — Rodar as verificações automáticas
 
@@ -143,11 +143,11 @@ Invoke-Item .tools/runtime/fase3/neuromorfismo/comparacao_temporal_lif.html
 - [ ] Conferimos os nove testes com `OK`.
 - [ ] Entendemos por que o resultado sintético não é um diagnóstico nem uma medida de economia energética.
 
-Esta lista é para quem reproduz preencher durante seu teste. A [demonstração em vídeo](https://youtu.be/-v9lWpZ_JJo), com 2min59s, está publicada como não listada e vinculada ao README raiz.
+Esta lista é para quem reproduz preencher durante seu teste. A [demonstração em vídeo](https://youtu.be/-v9lWpZ_JJo), está publicada como não listada e vinculada ao README raiz.
 
 ## 🔎 Se algum passo falhar
 
-- **Arquivo ausente:** confirmar a pasta e a versão do projeto. Não inventar um comando para um notebook que ainda não foi publicado.
+- **Arquivo ausente:** confirmar a pasta e a versão do projeto.
 - **`.venv` não encontrado:** voltar ao passo 2; não executar somente `pip` em outro Python.
 - **`ModuleNotFoundError`:** repetir a instalação deste guia usando o mesmo `.venv/Scripts/python.exe`.
 - **Caminho longo na instalação:** baixar uma cópia em pasta curta, como `C:\projetos`, e criar um ambiente novo ali. Não mover um `.venv` pronto entre pastas.
@@ -157,13 +157,13 @@ Esta lista é para quem reproduz preencher durante seu teste. A [demonstração 
 - **Métricas diferentes:** conferir Python, versões, semente 42 e revisão do código. Preservar saída e hash; diferenças de tempo são esperadas. Não alterar rótulos, remover casos difíceis ou ajustar parâmetros com base no teste para alcançar os números de referência.
 - **Ajuda por IA:** fornecer o número do passo, o comando, a saída completa e o resultado de `Get-Location`. Pedir a correção do erro antes de seguir.
 
-No Linux/macOS, trocar o executável por `./.venv/bin/python`, criar com `python3.12 -m venv .venv` e abrir os arquivos com o aplicativo do sistema. A reprodução local registrada foi realizada no Windows; não afirmamos teste manual nesses outros sistemas.
+No Linux/macOS, trocar o executável por `./.venv/bin/python`, criar com `python3.12 -m venv .venv` e abrir os arquivos com o aplicativo do sistema.
 
 ## 📊 Resultados e análise crítica
 
 No teste de 48 sessões, o tradicional acertou **44** e o LIF **35**. Obtivemos acurácia balanceada de **91,67% versus 72,92%**, F1 macro de **0,9165 versus 0,7262** e ROC-AUC de **0,9722 versus 0,7639**. O intervalo bootstrap de 95% da diferença de acurácia balanceada LIF menos tradicional foi de **−31,25 a −8,33 pontos percentuais**, restrito ao conjunto e ao protocolo sintéticos.
 
-O tradicional apresentou três falsos positivos e um falso negativo da classe oscilante; o LIF, nove e quatro. Neste ensaio, os atributos temporais explícitos foram mais úteis que o reservatório aleatório. O LIF demonstra integração temporal e codificação por eventos, mas sua representação e seus pesos fixos podem perder informações úteis. Não ajustamos o experimento para fazê-lo vencer.
+O tradicional apresentou três falsos positivos e um falso negativo da classe oscilante; o LIF, nove e quatro. Neste ensaio, os atributos temporais explícitos foram mais úteis que o reservatório aleatório. O LIF demonstra integração temporal e codificação por eventos, mas sua representação e seus pesos fixos podem perder informações úteis.
 
 Limitamos a análise a uma semente e a dois regimes artificiais. Não controlamos igualmente a quantidade de atributos (8 versus 120). A amostragem de cinco segundos não representa resolução de ECG. O bootstrap não cobre mudanças de gerador, pacientes ou outras sementes. Tempos medidos em CPU não permitem concluir consumo energético, vantagem em hardware ou aplicação clínica.
 
@@ -173,4 +173,4 @@ Limitamos a análise a uma semente e a dois regimes artificiais. Não controlamo
 - Gerstner et al. — [Reservoir computing](https://neuronaldynamics.epfl.ch/online/Ch20.S1.html).
 - Scikit-learn — [Prevenção de vazamento e ajuste do pré-processamento](https://scikit-learn.org/stable/common_pitfalls.html).
 
-Adaptamos as equações para um exemplo próprio; não reproduzimos os experimentos do livro. O relatório de duas páginas e o notebook complementam este guia. Publicamos o vídeo não listado e acrescentamos seu link ao README raiz. O envio acadêmico permanece separado desta publicação.
+Adaptamos as equações para o reservatório LIF implementado neste experimento.
