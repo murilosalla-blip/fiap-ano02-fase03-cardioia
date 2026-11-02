@@ -1,102 +1,36 @@
 # Organização e preservação do CardioIA
 
-Organizamos o projeto conforme o [modelo FIAP](https://github.com/agodoi/templateFiapVfinal), revisão `50e1e2720637b222357a7ebd1919c38a44af7cd2`. Consolidamos neste registro a organização, os critérios de redação e a preservação das entregas.
+Organizamos o repositório conforme o [modelo FIAP](https://github.com/agodoi/templateFiapVfinal). Mantemos `.github`, `assets`, `config`, `document`, `scripts` e `src` na raiz, com os materiais das três fases em suas respectivas subpastas.
 
-## Estrutura e reprodução
+## Caminhos e preservação
 
-Mantemos na raiz `.github`, `assets`, `config`, `document`, `scripts` e `src`. Agrupamos as três fases dentro de `assets`, `config`, `document` e `src`; mantemos o portal em `src/fase2/portal-cardioia`. Os [guias por fase](../../README.md) orientam a reprodução atual; preservamos os PDFs das entregas anteriores sem alterar seu conteúdo.
+- [Mapa de arquivos](mapa_arquivos.json): relaciona os caminhos anteriores aos atuais.
+- [Mudanças de padronização](mudancas_padronizacao.json): registra a organização por fase.
+- [Inventário da Fase 1](preservacao_fase1.json): identifica os arquivos e seus hashes de origem.
+- [Registro de higienização](higienizacao.json): identifica materiais retirados por caminho, categoria, hash e commit de recuperação.
 
-Usamos a primeira pessoa do plural para relatar atividades do grupo e o infinitivo para orientar a reprodução. Documentamos pré-requisitos, comandos a partir da raiz, resultados esperados e limites. Distinguimos requisitos, escolhas de implementação, testes concluídos e entregas pendentes; não apresentamos planos como resultados.
+Preservamos dados, código, notebooks, resultados e PDFs das entregas anteriores. Os [guias atuais](../../README.md) utilizam os caminhos organizados por fase; os documentos históricos mantêm os caminhos originais.
 
-Mantemos as exigências dos enunciados nas matrizes das [Fases 2](../../fase2/CHECKLIST_ENUNCIADO.md) e [3](../../fase3/CHECKLIST_ENUNCIADO.md) e nos [guias da Fase 1](../../fase1/README.md). Relatórios paginados, desafios, vídeo e submissão da Fase 3 continuam sujeitos à matriz de requisitos; esta organização não os substitui.
+## Links anteriores
 
-## Preservação e higienização
+Mantemos as três pastas Drive da Fase 1 e o vídeo da Fase 2 nas respectivas seções do README raiz. Os endereços estão registrados em [links_externos_preservados.json](links_externos_preservados.json).
 
-Registramos os destinos anteriores em [mapa_arquivos.json](mapa_arquivos.json) e [mudancas_padronizacao.json](mudancas_padronizacao.json), sem apagar seus itens. Preservamos o inventário de 223 itens do início da Fase 2 em [preservacao_fase1.json](preservacao_fase1.json): ele inclui os 181 arquivos do fechamento da Fase 1 e 42 acrescentados no início da Fase 2, não 223 arquivos exclusivos da Fase 1.
+As versões históricas das [Fases 1](https://github.com/murilosalla-blip/fiap-ano02-fase01-cardioia) e [2](https://github.com/murilosalla-blip/fiap-ano02-fase02-cardioia) estão em repositórios próprios. O [endereço original](https://github.com/murilosalla-blip/fiap-ano02-fase01-cap01-cardioia) e a [URL Git original](https://github.com/murilosalla-blip/fiap-ano02-fase01-cap01-cardioia.git) redirecionam ao repositório da Fase 3.
 
-Em 25/10/2026, retiramos 63 arquivos de apoio: 34 PDFs de aulas, 11 entradas transitórias substituídas, 13 estados do primeiro ensaio de rede, quatro registros de organização consolidados aqui e um workflow aninhado sem execução neste repositório. Identificamos cada retirada por caminho, categoria, hash e commit em [higienizacao.json](higienizacao.json). Recuperamos os arquivos no [commit anterior à limpeza](https://github.com/murilosalla-blip/fiap-ano02-fase03-cardioia/tree/ba328f487bd99cd844834161b0ee30fad10a13e9), pelos caminhos registrados. Mantemos também uma cópia local de segurança fora do Git, em `.tools/backups/higienizacao-ba328f4/`, com os arquivos identificados pelo hash Git e pela extensão.
+## Arquivos gerados durante a execução
 
-Dos 223 itens anteriores, conferimos 212 arquivos presentes e identificamos os 11 PDFs de aulas da Fase 1 pelo mesmo hash Git original no registro de recuperação. Não retiramos datasets, textos da amostra, imagens ECG, enunciados, fontes utilizadas, PDFs submetidos, código de execução, notebooks, métricas ou dependências. Mantemos as 16 cópias históricas em `document/other/historico/fase1/`, necessárias à conferência dos conteúdos originais. Não confundimos material didático com artefato necessário para executar o exercício.
+Ambientes virtuais, dependências, bancos SQLite e e-mails simulados ficam nas pastas locais indicadas nos guias, fora do versionamento. `src/fase2/app.py` e seu `requirements.txt` permanecem como entrada da aplicação Streamlit.
 
-Mantemos os logs funcionais e as capturas do Wokwi, os estados de `teste_rede_final/`, os registros de estabilidade e a validação guiada do painel. Retiramos somente o primeiro ensaio substituído, preservando as evidências finais. Mantemos os diagramas e cabeçalhos compartilhados nas duas pastas do firmware, pois cada projeto Wokwi precisa dos próprios arquivos locais.
+Em cópias antigas com dados em `fase3/runtime`, encerrar o painel e o consumidor antes de executar `python scripts/fase3/migrar_runtime.py`. O migrador preserva a origem e recusa sobrescrever destinos existentes. Cópias novas utilizam diretamente os caminhos dos guias.
 
-Preservamos os 18 endereços externos originais, registrados em [links_externos_preservados.json](links_externos_preservados.json), incluindo as três pastas do Drive e o vídeo da Fase 2. Os repositórios históricos das [Fases 1](https://github.com/murilosalla-blip/fiap-ano02-fase01-cardioia) e [2](https://github.com/murilosalla-blip/fiap-ano02-fase02-cardioia) mantêm seus fechamentos originais. Não alteramos esses repositórios nesta higienização.
+## Como verificar a preservação
 
-## Publicações e dados locais
-
-### Mapeamento de documentos públicos e internos - 31/10/2026
-
-Reavaliamos os documentos por finalidade, sem equiparar “não obrigatório” a “sem utilidade”. Mantemos no GitHub os materiais que permitem avaliar requisitos, conferir resultados, reproduzir o projeto ou verificar a preservação das fases anteriores.
-
-| Material | Destino e justificativa |
-|---|---|
-| Roteiro de narração do vídeo do Ir Além 2 | Mantemos apenas a cópia local em `document/fase3/neuromorfismo/ROTEIRO_VIDEO.md`, ignorada por regra explícita. Retiramos do índice Git e removemos referências dos guias públicos e do documento de submissão. É preparação interna, não evidência de vídeo entregue. |
-| Novos ensaios de fala, rascunhos e anotações de trabalho | Reservamos `.tools/interno/`, já coberto pela regra `.tools/` do `.gitignore`. Não colocamos nesses diretórios código, guias ou evidências necessárias à entrega. |
-| Planejamento e matriz de requisitos | Mantemos o roteiro de planejamento apenas como material interno em `.tools/interno/fase3/`. A matriz `CHECKLIST_ENUNCIADO.md` permanece pública, relacionando exigências, evidências e pendências para avaliação. |
-| READMEs, contratos, instalação, testes e guias de validação | Mantemos públicos: necessários à compreensão e reprodução das atividades. |
-| Quatro relatórios e documento de submissão da Fase 3 | Mantemos públicos: são entregáveis ou acessos centrais para avaliação; o vídeo permanece pendente. |
-| Logs finais, capturas, métricas, notebooks e registros de revisão | Mantemos públicos: comprovam execuções e limites, distinguindo verificações automatizadas de validações acompanhadas. |
-| Estudos de requisitos, referências e registros de organização/preservação | Mantemos como apoio em `document/other/`: contextualizam decisões e a continuidade das fases. Preservamos os materiais históricos das Fases 1 e 2. |
-
-Na primeira separação, classificamos para retirada pública o roteiro de narração. Posteriormente também reservamos o roteiro de planejamento para uso interno. Não apagamos sua cópia local. O `.gitignore` impede novas inclusões acidentais, mas não remove versões antigas do histórico; o material continua recuperável no commit anterior `6710241de52d1906ef1c21a1f496c70d7330c891`. A retirada passa a valer no GitHub após publicar e integrar a alteração.
-
-Não usamos padrões como `*.md`, `*.pdf` ou `document/other/` no `.gitignore`, pois ocultariam materiais úteis ou essenciais. Ao compartilhar este projeto por ZIP fora do Git, selecionar os arquivos da entrega: `.gitignore` não impede anexar arquivos locais manualmente.
-
-Mantemos `src/fase2/app.py` e o arquivo adjacente `requirements.txt`, que aponta para `config/fase2/requirements.txt`. A aplicação Streamlit publicada está vinculada ao fork da Julia; preservamos esse vínculo e a publicação independente do portal. O workflow aninhado retirado não realizava a publicação a partir deste repositório.
-
-Mantemos bancos SQLite, logs de execução e dependências locais em `.tools/`, fora do Git. Não removemos nem sobrescrevemos esses arquivos na higienização. Para uma cópia antiga ainda com dados em `fase3/runtime`, encerrar primeiro painel e consumidor e executar `python scripts/fase3/migrar_runtime.py`; o migrador preserva a origem e recusa sobrescrever destinos existentes. Em uma cópia nova, seguir diretamente o guia de instalação, sem migração.
-
-## Como verificar
-
-Executar na raiz:
+Após preparar o ambiente Python, executar na raiz:
 
 ```powershell
-python scripts/validar_organizacao.py
-python scripts/fase1/verificar_preservacao.py
-python -m unittest discover -s scripts/tests -p 'test_*.py' -v
+.\.venv\Scripts\python.exe scripts/validar_organizacao.py
+.\.venv\Scripts\python.exe scripts/fase1/verificar_preservacao.py
+.\.venv\Scripts\python.exe -m unittest discover -s scripts/tests -p 'test_*.py' -v
 ```
 
-Conferimos os arquivos atuais, os hashes protegidos, as saídas históricas dos notebooks e os links locais. As exceções são individuais e limitadas às categorias de apoio registradas; não autorizam retirar dados ou programas. Para as verificações funcionais, seguir os guias de cada fase. Preservar um endereço não comprova suas permissões públicas; conferir esse acesso antes da submissão.
-
-Na conferência de 25/10/2026, comparamos os arquivos antes e depois da higienização: mantivemos byte a byte os 250 arquivos de dados e execução conferidos em `assets`, `config` e `src`, excluindo textos Markdown revisados e o workflow inativo retirado. Reproduzimos os 303 registros da Fase 1 e conferimos as saídas dos quatro notebooks. Aprovamos os testes de NLP, Streamlit, sete testes do portal e seu build, 16 testes Python da Fase 3, 19 do painel, seis de proteção contra retiradas indevidas e os dois executáveis C++ de fila e confirmação MQTT. Conferimos novamente os logs existentes com os validadores Edge e MQTT; isso não representa uma nova simulação manual no Wokwi. Validamos a sintaxe dos quatro workflows e mantivemos os itens e hashes dos três inventários anteriores.
-
-## Revisão das instruções de reprodução - 27/10/2026
-
-Revisamos o README raiz, os guias atuais de cada fase, os guias auxiliares e os três relatórios da Fase 3. Explicitamos pré-requisitos, raiz de execução, preparação do ambiente, terminais separados, endereços, resultados esperados, encerramento e diagnóstico. Preservamos os PDFs submetidos nas fases anteriores e orientamos utilizar os guias atuais para executar a organização atual.
-
-Preparamos uma cópia isolada dos arquivos versionados e das alterações locais em revisão, sem copiar `.venv`, `.tools` ou `node_modules`. Não apresentamos essa cópia como um clone público já atualizado: as mudanças ainda dependem de publicação. Instalamos as dependências novamente. No primeiro caminho, muito aninhado, a instalação de Jupyter falhou com aviso de limite de caminho do Windows. Repetimos em pasta temporária curta e concluímos a instalação. Incluímos essa condição e a orientação de não mover ambientes virtuais no README.
-
-Conferimos nessa reprodução:
-
-- preparação numérica com 303 registros e verificação dos 223 itens inventariados;
-- extração textual, testes NLP, treinamento textual e teste funcional Streamlit;
-- conferência das saídas dos quatro notebooks entregues e reexecução do notebook textual com kernel registrado no ambiente novo, gravando a cópia em `.tools/reproducao/fase2/`;
-- 23 testes Python da Fase 3, incluindo REST por HTTP local, e seis testes de proteção da preservação;
-- instalação npm limpa, sete testes do portal e build concluído;
-- instalação limpa do Node-RED, 19 testes do painel e resposta HTTP 200 no endereço `/dashboard/monitoramento`, usando porta isolada 1889 apenas neste ensaio.
-
-Os logs e ambientes de trabalho ficam em `.tools/reproducao-20261027/` e em pasta temporária local, fora do versionamento. Os resultados desta revisão não representam novos ensaios manuais do Wokwi, nova validação dos links externos, reexecução de TensorFlow/treinamentos visuais ou testes em Linux/macOS. Mantemos as evidências anteriores desses experimentos e identificamos downloads, arquitetura e rede como dependências das instruções correspondentes. Não garantimos a disponibilidade futura de serviços externos nem a nota da avaliação.
-
-Na mesma revisão de 27/10, detalhamos a Fase 3 para reprodução por iniciantes: vocabulário inicial, instalação e download, verificações antes de avançar, terminais A/B, etapas numeradas do circuito e painel, nove passos de REST e conferência final. Mantemos o Ir Além 2 identificado como pendente. Esta ampliação é de instruções; não representa nova execução dos ensaios registrados acima.
-
-Reorganizamos também os três PDFs da Fase 3: Edge com sete passos em duas páginas; MQTT/dashboard com dez passos e preparação em quatro páginas; REST/e-mail com nove passos em duas páginas. Conferimos as oito páginas renderizadas e atualizamos os índices para a paginação atual. Mantivemos os mínimos de uma e duas páginas dos relatórios principais e o limite de uma a duas páginas do Ir Além 1. Os PDFs históricos das fases anteriores não foram reescritos.
-
-Consolidamos a [conferência final de reprodução de 27/10](../fase3/evidencias/2026-10-27/reproducao/RESULTADOS.md): clone com revisão local aplicada, instalações novas, execução Serial, integração MQTT observada, REST completo após reinício e 12 cenários do painel pelo broker real. Registramos expressamente a limitação na repetição integral dos passos visuais do Wokwi. Corrigimos a orientação para aguardar Server now running e Started flows antes de abrir o painel.
-
-Na continuação da mesma revisão, concluímos a repetição visual acompanhada do Wokwi e conferimos 41 medições únicas sem lacunas nem perdas, com entrada/retorno dos dois alertas e recuperação pela chave. A [conferência guiada](../fase3/evidencias/2026-10-27/reproducao/validacao_guiada/RESULTADOS.md) encerra a pendência visual registrada nas tentativas anteriores.
-
-Na continuação de 27/10, implementamos o Ir Além 2 em `src/fase3/neuromorfismo/` e `src/fase3/notebooks/`, com dependências próprias, resultados em `assets/fase3/resultados/neuromorfismo/` e guia em `document/fase3/neuromorfismo/`. Executamos os seis testes e o notebook em ambiente novo. Produzimos o relatório comparativo de duas páginas. Não alteramos os dados, programas ou PDFs históricos das Fases 1 e 2. Mantemos validação guiada, revisão do grupo, publicação e vídeo pendentes. Os resultados locais e seus limites estão registrados em `document/other/fase3/evidencias/2026-10-27/neuromorfismo/`.
-
-## Consolidação da navegação por fase
-
-Concentramos apresentação, materiais externos, relatórios, vídeo e reprodução dentro de cada fase do README. Retiramos a seção de vídeos e a lista paralela de links; a preparação do ambiente permanece comum às trilhas. Mantemos apenas registros executivos no histórico e retiramos datas operacionais dos textos de apresentação.
-
-Preservamos localmente o planejamento em `.tools/interno/fase3/ROTEIRO_ENTREGA.md`. Registramos sua retirada individual e os hashes de recuperação em `higienizacao.json`; a versão anterior continua recuperável no histórico Git. A regra de verificação permite somente esse documento na categoria de planejamento interno, sem autorizar retirar relatórios, código ou dados.
-
-Os dois endereços antigos do repositório renomeado ficam neste registro: [endereço original](https://github.com/murilosalla-blip/fiap-ano02-fase01-cap01-cardioia) e [URL Git original](https://github.com/murilosalla-blip/fiap-ano02-fase01-cap01-cardioia.git). Eles redirecionam ao repositório atual. Os links de materiais da Fase 1, aplicações, portal e vídeos permanecem dentro das respectivas fases no README.
-
-Conferimos esta reorganização em cópia nova, com ambiente Python e dependências Node-RED instalados do zero: 23 testes REST/MQTT, 19 do painel, nove de IA/exportação e nove de preservação aprovados. Executamos novamente a comparação e o notebook completo; mantivemos os resultados de referência. Os validadores confirmaram a preservação dos conteúdos anteriores e dos links locais. Conferimos visualmente as seis páginas do documento de submissão atualizado.
-
-Os dois Wokwi, três pastas Drive, repositórios, portal e dois vídeos responderam à consulta HTTP. O endereço Streamlit apresentou ciclo de redirecionamento; a ferramenta de navegador ficou indisponível, portanto não confirmamos sua interface nesta revisão. Mantivemos o link histórico e o caminho de execução local da Fase 2. Não repetimos uma sessão visual do Wokwi: preservamos as evidências guiadas anteriores. Os logs desta conferência ficam em `.tools/auditoria-readme-20261101/`, fora da entrega pública.
-
-A tentativa adicional de recompilar os testes C++ foi interrompida após demora na preparação do compilador local, sem resultado novo. Não alteramos firmware; mantemos os resultados C++ anteriores, separados dos 60 testes Python/Node aprovados nesta revisão.
+O primeiro verificador confere os destinos, conteúdos protegidos e links locais. O segundo compara os arquivos da Fase 1 com o inventário de origem. Os testes verificam as regras de preservação e recuperação.

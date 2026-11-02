@@ -42,7 +42,7 @@ Aprovamos os 23 testes Python da Fase 3 e os 19 testes das regras do painel ness
 
 Identificamos e corrigimos uma ambiguidade nos guias e no PDF MQTT: a linha inicial `Painel: ...` anuncia o endereço antes de o Node-RED terminar de carregar. Agora orientamos aguardar `Server now running` e `Started flows` antes de abrir a página. Também explicitamos que, no teste Serial offline, os valores dos sensores são conferidos nos JSONs recuperados após reconectar.
 
-Mantivemos os relatórios com duas páginas em Edge, quatro em MQTT/dashboard e duas em REST/e-mail. Conferimos a renderização dos PDFs alterados e a preservação dos arquivos anteriores. A revisão não comprova instalação em outro sistema operacional, disponibilidade futura dos serviços externos, publicação dos novos arquivos ou submissão na FIAP.
+Mantivemos os relatórios com duas páginas em Edge, quatro em MQTT/dashboard e duas em REST/e-mail. Conferimos a renderização dos PDFs alterados e a preservação dos arquivos anteriores.
 
 ## Complemento - repetição visual acompanhada concluída
 

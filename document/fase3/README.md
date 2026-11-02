@@ -2,7 +2,7 @@
 
 Implementamos o protótipo ESP32 → MQTT → consumidor SQLite → painel Node-RED. Este guia permite reproduzir coleta, interrupção, recuperação e alertas sem depender do ambiente utilizado pelo grupo.
 
-**Entregáveis:** concluímos as implementações e validações das Partes 1 e 2 e dos dois desafios. Disponibilizamos os relatórios [Edge — duas páginas](CardioIA_Fase3_Relatorio_Edge.pdf), [MQTT/dashboard — quatro páginas](CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf), [REST/e-mail — duas páginas](CardioIA_Fase3_Relatorio_REST_Email.pdf) e [tradicional/LIF — duas páginas](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf), além do [vídeo não listado de 2min59s](https://youtu.be/-v9lWpZ_JJo). O [documento de submissão](CardioIA_Fase3_Documento_de_Submissao.pdf) reúne os acessos para avaliação. A [matriz de requisitos](CHECKLIST_ENUNCIADO.md) relaciona exigências, evidências e pendências de envio na FIAP.
+**Entregáveis:** disponibilizamos os relatórios [Edge — duas páginas](CardioIA_Fase3_Relatorio_Edge.pdf), [MQTT/dashboard — quatro páginas](CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf), [REST/e-mail — duas páginas](CardioIA_Fase3_Relatorio_REST_Email.pdf) e [tradicional/LIF — duas páginas](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf), além do [vídeo não listado](https://youtu.be/-v9lWpZ_JJo). O [documento de submissão](CardioIA_Fase3_Documento_de_Submissao.pdf) reúne os acessos para avaliação. A [matriz de requisitos](CHECKLIST_ENUNCIADO.md) relaciona os requisitos aos arquivos da entrega.
 
 ## Qual Wokwi utilizar
 
@@ -31,7 +31,7 @@ O DHT22 conta como **um sensor**, apesar de fornecer temperatura e umidade. Util
 - **API REST:** serviço consultado por endereços HTTP. Neste projeto, enviamos e consultamos dados com um cliente Python.
 - **JSON:** texto com campos entre chaves, usado para transportar os dados. Ver JSON no teste REST é o resultado esperado, não um erro.
 
-**Ordem da demonstração:** preparar o computador → testar o circuito Serial → iniciar o painel → testar MQTT e sensores → testar interrupção → encerrar → testar REST e e-mail. Depois, executar a comparação do Ir Além 2 pelo guia específico; sua validação guiada foi concluída e o vídeo está publicado.
+**Ordem da demonstração:** preparar o computador → testar o circuito Serial → iniciar o painel → testar MQTT e sensores → testar interrupção → encerrar → testar REST e e-mail. Depois, executar a comparação do Ir Além 2 pelo guia específico.
 
 ### Passo 2 — Instalar e conferir os programas
 
@@ -139,7 +139,7 @@ npm.cmd ci --prefix src/fase3/node-red --ignore-scripts --no-audit --no-fund
 
 ### Outros sistemas operacionais
 
-O passo a passo guiado acima foi conferido no Windows. No Linux/macOS, instalar Git, Python 3.12 e Node.js 24 para o sistema; usar `cd` em lugar de `Set-Location`, criar o ambiente com `python3.12 -m venv .venv`, usar `./.venv/bin/python` em lugar de `.\.venv\Scripts\python.exe` e `npm` em lugar de `npm.cmd`. Para selecionar Python no inicializador, usar `export CARDIOIA_PYTHON="$PWD/.venv/bin/python"`. Os comandos específicos do Explorador e `Get-Content` são do Windows. Não afirmamos validação desta revisão nesses outros sistemas.
+O passo a passo guiado acima foi conferido no Windows. No Linux/macOS, instalar Git, Python 3.12 e Node.js 24 para o sistema; usar `cd` em lugar de `Set-Location`, criar o ambiente com `python3.12 -m venv .venv`, usar `./.venv/bin/python` em lugar de `.\.venv\Scripts\python.exe` e `npm` em lugar de `npm.cmd`. Para selecionar Python no inicializador, usar `export CARDIOIA_PYTHON="$PWD/.venv/bin/python"`. Os comandos específicos do Explorador e `Get-Content` são do Windows.
 
 ## Etapa 1 — Ver o circuito funcionar sem o painel
 
@@ -296,9 +296,9 @@ Executar a consulta após o consumidor iniciar e receber dados. A chave é `(dev
 3. Executar a comparação e abrir os três gráficos na pasta local indicada.
 4. Executar todas as células do notebook pelo comando `--notebook` e abrir o HTML.
 5. Conferir os nove testes, as mesmas 48 sessões de teste e a análise crítica.
-6. Revisar o [relatório comparativo](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf). O [vídeo de 2min59s](https://youtu.be/-v9lWpZ_JJo) apresenta resultados e análise crítica e está publicado como não listado, com link no README raiz.
+6. Revisar o [relatório comparativo](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf). O [vídeo](https://youtu.be/-v9lWpZ_JJo) apresenta resultados e análise crítica e está publicado como não listado, com link no README raiz.
 
-**Resultado da referência:** tradicional com 44/48 acertos e LIF com 35/48, sem usar o teste para selecionar parâmetros. Os sinais são sintéticos e a rede LIF tem leitura logística treinada. Esta trilha não depende de Wokwi ou servidores. Publicamos o vídeo e conferimos duração, visibilidade e reprodução sem login.
+**Resultado da referência:** tradicional com 44/48 acertos e LIF com 35/48, sem usar o teste para selecionar parâmetros. Os sinais são sintéticos e a rede LIF tem leitura logística treinada. Esta trilha não depende de Wokwi ou servidores.
 
 ## Etapa 5 — Conferir o que foi concluído
 
@@ -311,7 +311,7 @@ Executar a consulta após o consumidor iniciar e receber dados. A chave é `(dev
 - [ ] Encerramos os serviços sem apagar bancos ou evidências.
 - [ ] Executamos a comparação tradicional/LIF, abrimos o notebook executado e conferimos testes e limites.
 
-Esta lista é para quem reproduz marcar durante seu próprio teste. O **Ir Além 2 possui implementação, notebook e relatório**, com reprodução detalhada no guia; concluímos a validação guiada e publicamos o vídeo. Os [relatórios](../../document/README.md) e as evidências complementam a avaliação, sem substituir a execução acima.
+Os [relatórios](../../document/README.md) apresentam o fluxo e os resultados das atividades.
 
 ## Teste adicional — reenvio e deduplicação
 
@@ -363,4 +363,4 @@ Uma leitura atual exige `age_ms <= 10000`, `backlog_samples == 1`, recebimento l
 
 O inicializador carrega o export e suas dependências. Para importar em outra instância, instalar FlowFuse Dashboard e disponibilizar `monitor.js` por `config/fase3/node-red/settings.js`. O JSON sozinho não inclui essa configuração. Consultar o [guia Node-RED](node-red/README.md).
 
-Os registros Markdown e prints comprovam testes, mas **não substituem os relatórios com mínimos de páginas**. Produzimos os relatórios Edge (duas páginas) e MQTT/dashboard (quatro páginas), disponíveis no início deste guia. Implementamos cliente REST, regras e e-mail simulado no [Ir Além 1](rest/README.md), com sete testes locais; concluímos sua validação guiada e produzimos o relatório de duas páginas. Implementamos e testamos o [Ir Além 2](neuromorfismo/README.md), com comparação tradicional × LIF, notebook executado e relatório de duas páginas. Concluímos a validação guiada; publicamos o vídeo não listado de 2min59s, vinculado ao README raiz. O endpoint de consulta do painel não satisfaz esses desafios.
+Os relatórios Edge, MQTT/dashboard, REST/e-mail e tradicional/LIF estão disponíveis no início deste guia.

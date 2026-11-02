@@ -27,10 +27,3 @@ Registramos o estado da interface durante a execução em `wokwi_entrega1_estado
 ## Revisão visual
 
 Reorganizamos o diagrama: separamos os sensores verticalmente, posicionamos os textos fora dos componentes, acrescentamos instruções da chave e definimos rotas para os fios. Desviamos o terra cinza para o contorno inferior, liberando a área do botão. Salvamos a disposição atualizada em `wokwi_layout_organizado.png`.
-
-## Ainda pendente
-
-- Vamos concluir a revisão final da primeira entrega.
-- Concluímos em 24/10/2026 os cenários ampliados no simulador: fila cheia com capacidade reduzida, botão segurado e reinício. Registramos a execução e a restauração da capacidade padrão em `2026-10-24/RESULTADOS.md`.
-- Vamos implementar MQTT, confirmação do consumidor, dashboard e desafios extras nas próximas entregas.
-- Criamos o workflow de validação localmente; ainda não verificamos sua execução no GitHub.

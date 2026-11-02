@@ -138,12 +138,12 @@ explorer.exe "$PWD\.tools\runtime\fase3\rest\emails"
 
 **Não executar `--demonstrar` neste passo:** isso criaria outra sessão e atrapalharia a comparação.
 
-### Passo 9 — Encerrar e guardar a conferência
+### Passo 9 — Encerrar
 
 1. No terminal A, pressionar Ctrl+C. Agora é possível fechar os dois PowerShell.
 2. Preservar `.tools/runtime/fase3/rest/`: contém banco, e-mails e o resultado JSON salvo no passo 4. Não apagar essa pasta para “limpar” o teste.
 3. Marcar como concluído somente o que foi observado: cinco leituras, dois e-mails, reenvio reconhecido e persistência após reinício.
-4. Se alguma etapa falhar, registrar o número do passo, comando, saída e resultado esperado para revisão. Os arquivos locais não são enviados automaticamente ao GitHub.
+4. Se alguma etapa falhar, registrar o número do passo, comando, saída e resultado esperado para revisão.
 
 No Linux/macOS, utilizar a preparação específica do [guia principal](../README.md), substituir o executável por `.venv/bin/python` e abrir a pasta de e-mails pelo gerenciador de arquivos do sistema.
 
@@ -173,18 +173,18 @@ Nessa pasta alternativa, a consulta inicialmente retorna uma lista vazia. Para g
 
 Geramos alerta quando os pulsos artificiais ultrapassam **120 BPM** ou a temperatura **ambiente** ultrapassa **30 °C**. Encerramos cada episódio ao retornar a até **108 BPM** ou **28 °C**, respectivamente. Um novo motivo gera uma mensagem; permanecer no mesmo episódio não gera outra. Neste cliente avaliamos uma leitura elegível, enquanto o painel Node-RED exige duas leituras consecutivas. Essa escolha torna explícito o fluxo de automação do desafio.
 
-Leituras marcadas como recuperadas, com idade no envio superior a dez segundos ou fila maior que uma posição ficam registradas sem acionar ou encerrar episódios. Sensor inválido não encerra um alerta de temperatura. Zero pulsos representa ausência de acionamentos do botão, sem interpretação clínica. Os exemplos de risco do enunciado não nos autorizam a chamar temperatura ambiente de febre.
+Leituras marcadas como recuperadas, com idade no envio superior a dez segundos ou fila maior que uma posição ficam registradas sem acionar ou encerrar episódios. Sensor inválido não encerra um alerta de temperatura. Zero pulsos representa ausência de acionamentos do botão, sem interpretação clínica. A temperatura utilizada nas regras é ambiente.
 
 A API recebe cópias fornecidas pelo cliente, sem assinatura de horário de coleta real; sua avaliação é uma demonstração sobre os metadados informados, não um monitor clínico do presente. Não existe encaminhamento automático MQTT → REST nesta etapa. Não cruzamos esses dados com pacientes das fases anteriores.
 
 Persistimos leituras, episódios e conteúdo das mensagens em SQLite antes de exportar `.eml`. Ao reiniciar, reconstruímos arquivos ausentes e preservamos a supressão de duplicatas. Exigimos sequência crescente por dispositivo/sessão e rejeitamos identidade repetida com conteúdo diferente. O serviço é local, de uma requisição por vez, sem autenticação ou TLS; não se destina à publicação na internet. A retenção em disco não é limitada nesta demonstração.
 
-## 🧪 Testes e situação
+## 🧪 Testes
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s src/fase3/tests -p test_rest.py -v
 ```
 
-Conferimos sete testes em 26/10/2026, com HTTP local real: envio e consulta, normalização e novo episódio, duplicatas, conflitos, dados inválidos, leituras históricas, sensor inválido, persistência após reinício, reconstrução de e-mail e falhas HTTP/conexão. Preservamos a [saída da demonstração](../../other/fase3/evidencias/2026-10-26/rest/resultado_demonstracao.json).
+A suíte contém sete testes HTTP locais: envio e consulta, normalização e novo episódio, duplicatas, conflitos, dados inválidos, leituras históricas, sensor inválido, persistência após reinício, reconstrução de e-mail e falhas HTTP/conexão. Preservamos a [saída da demonstração](../../other/fase3/evidencias/2026-10-26/rest/resultado_demonstracao.json).
 
-Concluímos a implementação, os sete testes HTTP e a [validação guiada](../../other/fase3/evidencias/2026-10-26/rest/validacao_guiada/RESULTADOS.md), incluindo consulta após reinício. O [relatório de duas páginas](../CardioIA_Fase3_Relatorio_REST_Email.pdf) descreve o fluxo e os resultados. A comparação tradicional/LIF está disponível no [guia do Ir Além 2](../neuromorfismo/README.md).
+O [relatório de duas páginas](../CardioIA_Fase3_Relatorio_REST_Email.pdf) descreve o fluxo e os resultados.

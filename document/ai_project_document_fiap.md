@@ -42,9 +42,9 @@ Na Fase 1, concluímos a preparação das três modalidades. Na Fase 2, registra
 
 Na Fase 3, validamos coleta offline, retomada, reenvio, deduplicação, pulsos, alteração da temperatura ambiente e alertas do dashboard. Preservamos os [resultados Edge](other/fase3/evidencias/2026-10-24/RESULTADOS.md), [MQTT](other/fase3/evidencias/2026-10-24/mqtt/RESULTADOS.md) e [Node-RED](other/fase3/evidencias/2026-10-24/dashboard/RESULTADOS.md).
 
-## 5. Conclusões e trabalhos futuros
+## 5. Conclusões
 
-Concluímos a base de dados e os experimentos das Fases 1 e 2 e validamos as três primeiras entregas práticas da Fase 3. Implementamos e validamos REST/e-mail e produzimos seu [relatório de duas páginas](fase3/CardioIA_Fase3_Relatorio_REST_Email.pdf). Implementamos a [comparação tradicional/LIF](fase3/neuromorfismo/README.md), executamos o notebook em ambiente novo e produzimos o relatório de duas páginas. Concluímos a validação guiada dessa trilha em 28/10/2026, incluindo gráficos, notebook completo e seis testes com `OK`. Concluímos a revisão técnica dos quatro relatórios em 28/10/2026 e conferimos links e identificação dos integrantes. Publicamos o [vídeo do Ir Além 2](https://youtu.be/-v9lWpZ_JJo) em 01/11/2026, com duração de 2min59s e acesso sem login conferido. Ainda precisamos concluir o fechamento e a submissão na FIAP. Produzimos os relatórios obrigatórios de [Edge](fase3/CardioIA_Fase3_Relatorio_Edge.pdf) e [MQTT/dashboard](fase3/CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf), com paginação conferida; concluímos a revisão técnica em 28/10/2026. Relacionamos requisitos, evidências e pendências na [matriz da Fase 3](fase3/CHECKLIST_ENUNCIADO.md).
+Integramos captura simulada, resiliência offline e transmissão MQTT ao CardioIA. Os relatórios de [Edge](fase3/CardioIA_Fase3_Relatorio_Edge.pdf) e [MQTT/dashboard](fase3/CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf) descrevem esse fluxo. No [Ir Além 1](fase3/rest/README.md), implementamos comunicação REST e geração automática de e-mails simulados. No [Ir Além 2](fase3/neuromorfismo/README.md), comparamos regressão logística e LIF: obtivemos F1 macro de 0,9165 e 0,7262, respectivamente, nas mesmas 48 sessões sintéticas de teste. O [vídeo](https://youtu.be/-v9lWpZ_JJo) apresenta os resultados e a análise crítica.
 
 ## 6. Referências
 

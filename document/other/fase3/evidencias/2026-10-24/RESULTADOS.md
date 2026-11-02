@@ -49,4 +49,4 @@ Obtivemos aprovação das verificações de fila cheia, ordem, perdas, pulso ún
 
 ## Situação da primeira entrega
 
-Concluímos a implementação e os testes técnicos previstos para a primeira entrega, incluindo os cenários ampliados. Ainda precisamos concluir nossa revisão final da entrega. Vamos implementar transmissão MQTT e confirmação do consumidor na etapa seguinte; nesta etapa, validamos exclusivamente a demonstração Serial local.
+Concluímos a implementação e os testes técnicos previstos para a primeira entrega, incluindo os cenários ampliados. Os resultados desta parte correspondem à demonstração Serial local.

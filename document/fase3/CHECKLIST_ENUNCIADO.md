@@ -1,6 +1,6 @@
 # Matriz de requisitos da Fase 3
 
-Relacionamos os requisitos do enunciado às implementações, entregáveis e evidências. As Partes 1 e 2 e os dois desafios estão implementados e documentados. O fechamento acadêmico permanece separado da publicação no GitHub e no YouTube; não antecipamos nota.
+Relacionamos os requisitos do enunciado às implementações, entregáveis e evidências. As Partes 1 e 2 e os dois desafios estão implementados e documentados.
 
 ## Critérios da atividade obrigatória — 10 pontos
 
@@ -32,14 +32,14 @@ SPIFFS não integra a pontuação obrigatória. Os dois Ir Além foram incluído
 
 | Exigência | Entrega e resultado |
 |---|---|
-| ESP32 envia dados à nuvem via MQTT | [Wokwi MQTT](https://wokwi.com/projects/478772789361460225) e broker remoto `broker.hivemq.com:1883`; HiveMQ Cloud é um exemplo de produto, não uma plataforma específica obrigatória |
+| ESP32 envia dados à nuvem via MQTT | [Wokwi MQTT](https://wokwi.com/projects/478772789361460225) e broker remoto `broker.hivemq.com:1883` |
 | Código ESP32 | [Firmware MQTT e diagrama](../../src/fase3/firmware/cardioia_mqtt/) |
 | Dashboard Node-RED em tempo real | Subscrição de telemetria, estado e ACK; gráfico de BPM e gauge de temperatura ambiente |
 | Alertas visuais automáticos | Pulsos >120 BPM ou ambiente >30 °C; duas leituras atuais consecutivas. Retorno até 108 BPM ou 28 °C, com a mesma confirmação |
 | Prints ou export do dashboard | Entregamos ambos: [flows.json](../../src/fase3/node-red/flows.json) e [capturas](../../assets/fase3/evidencias/) |
 | Relatório mínimo de duas páginas | [Relatório MQTT/dashboard — quatro páginas](CardioIA_Fase3_Relatorio_MQTT_Dashboard.pdf), com comunicação, tópicos, configuração e execução |
 
-**Configuração e limites:** o broker é remoto; consumidor, SQLite e Node-RED executam localmente. O [guia Node-RED](node-red/README.md) explica os arquivos auxiliares necessários ao export. Grafana é opcional e não foi utilizado. Os limites dos alertas são definidos pelo grupo; 38 °C é exemplo, não exigência de temperatura corporal. Leituras recuperadas entram no histórico sem confirmar alertas do presente. Broker público sem autenticação/TLS é utilizado somente com dados fictícios.
+**Configuração e limites:** o broker é remoto; consumidor, SQLite e Node-RED executam localmente. O [guia Node-RED](node-red/README.md) explica os arquivos auxiliares necessários ao export. Grafana é opcional e não foi utilizado. Leituras recuperadas entram no histórico sem confirmar alertas do presente. Broker público sem autenticação/TLS é utilizado somente com dados fictícios.
 
 ## Ir Além 1 — REST e e-mail
 
@@ -52,7 +52,7 @@ SPIFFS não integra a pontuação obrigatória. Os dois Ir Além foram incluído
 | Clareza e organização | [Guia passo a passo](rest/README.md), contratos em `config/fase3/`, código e testes em `src/fase3/`, saídas locais ignoradas em `.tools/runtime/` |
 | Funcionamento demonstrado | [Validação com cinco leituras e dois e-mails](../other/fase3/evidencias/2026-10-26/rest/validacao_guiada/RESULTADOS.md), persistência após reinício e sete testes HTTP |
 
-**Escopo:** o enunciado solicita simulação de e-mail, portanto não exigimos SMTP ou recebimento em caixa real. Taquicardia, febre e ausência de movimento são exemplos de riscos, não três detecções cumulativas obrigatórias. Nossas regras são didáticas: temperatura ambiente não é febre. O desafio não exige serviço externo, interface gráfica de RPA ou encaminhamento automático MQTT → REST.
+**Escopo:** simulamos os e-mails em arquivos `.eml`. Aplicamos limites aos pulsos artificiais e à temperatura ambiente, com controle de episódios para evitar mensagens repetidas.
 
 ## Ir Além 2 — IA temporal e LIF
 
@@ -63,32 +63,12 @@ SPIFFS não integra a pontuação obrigatória. Os dois Ir Além foram incluído
 | Notebook comentado e organizado | [Notebook executado](../../src/fase3/notebooks/comparacao_temporal_lif.ipynb), com dados, divisão, modelos, resultados, análise crítica e referências |
 | Código e README públicos | Código, dependências e [guia de reprodução](neuromorfismo/README.md) disponíveis no repositório |
 | Relatório comparativo de duas páginas | [Relatório tradicional/LIF — duas páginas](CardioIA_Fase3_Relatorio_Neuromorfismo.pdf) |
-| Vídeo até quatro minutos e análise crítica | [YouTube não listado — 2min59s](https://youtu.be/-v9lWpZ_JJo), vinculado ao README raiz; [publicação e conferência da transcrição](../other/fase3/evidencias/2026-11-01/video/RESULTADOS.md) |
+| Vídeo até quatro minutos e análise crítica | [YouTube não listado](https://youtu.be/-v9lWpZ_JJo), vinculado ao README raiz |
 
-**Protocolo e limites:** utilizamos séries sintéticas de BPM, sem pacientes ou ECG. Separamos 144/48/48 sessões antes das janelas; normalização no treino e seleção de parâmetros na validação. O teste não ajusta o modelo. Discutimos representações diferentes, uma semente, incerteza e ausência de medição energética/validação clínica. O enunciado permite LIF ou FHN, sem exigir os dois ou superioridade neuromórfica. Conferimos nove testes dos modelos/exportação e o conteúdo narrado por transcrição automática, sujeita a erros de reconhecimento; não a apresentamos como escuta integral.
-
-## Aceite antes da submissão
-
-- [x] Implementamos e validamos sensores, resiliência, MQTT, dashboard e alertas.
-- [x] Entregamos código, diagramas, export e capturas, com execução documentada.
-- [x] Conferimos relatórios obrigatórios com duas e quatro páginas.
-- [x] Implementamos e validamos REST/e-mail e entregamos relatório de duas páginas.
-- [x] Executamos a comparação tradicional/LIF, entregamos notebook, resultados e relatório de duas páginas.
-- [x] Publicamos o vídeo não listado e conferimos duração, reprodução sem login, gráficos, números e transcrição automática.
-- [x] Preservamos as entregas e links essenciais das fases anteriores.
-- [x] Conferimos os três integrantes e RMs nos documentos.
-- [ ] Conferir o cadastro efetivo dos integrantes no grupo da plataforma FIAP.
-- [ ] Conferir formatos, tamanho e campos aceitos no upload.
-- [ ] Publicar a revisão documental final e anexar o arquivo correto na atividade.
-- [ ] Confirmar o envio, baixar/reabrir o conteúdo e guardar o comprovante.
-
-O [documento de submissão](CardioIA_Fase3_Documento_de_Submissao.pdf) reúne os acessos para avaliação; não substitui os quatro relatórios específicos. O enunciado informa grupo de um a cinco integrantes e prazo de 04/11/2026 às 23h59; confirmar as regras efetivas na plataforma. Até três dias de atraso há limitação de nota conforme a orientação fornecida. Não registramos submissão ou avaliação como concluída sem confirmação da FIAP.
+**Protocolo e limites:** utilizamos séries sintéticas de BPM, sem pacientes ou ECG. Separamos 144/48/48 sessões antes das janelas; normalização no treino e seleção de parâmetros na validação. O teste não ajusta o modelo. Discutimos representações diferentes, uma semente, incerteza e ausência de medição energética/validação clínica.
 
 ## Fontes e registros
 
 - [Enunciado e materiais de referência](../other/referencias/README.md).
 - [Reprodução em cópia nova e validação guiada IoT](../other/fase3/evidencias/2026-10-27/reproducao/RESULTADOS.md).
-- [Revisão técnica dos documentos e acessos](../other/fase3/evidencias/2026-10-28/REVISAO_ENTREGA.md).
 - [Guia de testes](tests/README.md), com contratos, persistência, modelos, núcleo C++ e validadores dos registros preservados.
-
-Os registros datados documentam o que foi executado em cada revisão. Reexecutar validadores desses registros não equivale a uma nova sessão visual autônoma no Wokwi. O planejamento do grupo permanece em material interno local.
